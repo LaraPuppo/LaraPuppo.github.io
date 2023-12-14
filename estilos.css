@@ -1,8 +1,20 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url('font/Outfit-Regular.ttf') format('truetype');
+    /* Puedes agregar más formatos según sea necesario (e.g., woff, woff2) */
+    font-weight: normal;
+    font-style: normal;
+}
 
-@import url('https://fonts.googleapis.com/css?family=Outfit&display=swap');
+@font-face {
+    font-family: 'Outfit';
+    src: url('font/Outfit-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
 h1, h2, h3, h4 {
-    font-family: 'Outfit', sans-serif; 
+    font-family: 'Outfit', sans-serif;
 }
 
 p{
