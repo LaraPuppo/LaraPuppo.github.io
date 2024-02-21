@@ -1,0 +1,117 @@
+:root {
+  --first-color: rgb(16, 16, 16);
+  --first-alpha-color: rgba(8, 8, 8);
+  --second-color: rgb(194, 26, 32);
+  --second-alpha-color: rgba(194, 26, 32, 0.75);
+  --third-color: rgb(255, 255, 255);
+  --accent-color: rgb(242, 175, 48);
+}
+
+a {
+  color: var(--first-alpha-color);
+  transition: all 0.3s ease-out;
+}
+
+a:hover {
+  color: var(--second-color);
+}
+
+p{
+font-size: 15px;
+}
+
+body {
+  font-family: "montserrat", sans-serif;
+}
+
+.imgresize{
+    width: 32px;
+    height: 32px;
+}
+
+
+.bg-dark {
+  background-color: var(--first-color) !important;
+}
+
+.navbar {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.navbar-brand {
+  font-weight: 300px;
+  font-size: 1.2rem;
+}
+
+.navbar-brand img {
+  width: 4.7rem;
+  height: 4.7rem;
+  padding-right: 10px;
+}
+
+.navbar-dark .navbar-toggler {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  transition: all 0.3s ease-out;
+}
+
+.navbar-dark .navbar-toggler:hover {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  opacity: 0.75;
+}
+
+.nav-item {
+  padding-left: 0.5rem;
+  transition: all 0.3s ease-out;
+  margin-right: 15px;
+}
+
+.nav-item:hover {
+  background-color: var(--first-alpha-color);
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: var(--second-color) !important;
+}
+
+.nav-link {
+  color: var(--third-color);
+  font-size: 1.2rem;
+}
+
+.nav-link:hover {
+  color: var(--second-color);
+}
+
+footer {
+  background-color: var(--accent-color);
+}
+
+/* // X-Small devices (portrait phones, less than 576px)
+    // No media query for `xs` since this is the default in Bootstrap */
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .nav-item:hover {
+    background-color: transparent;
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
