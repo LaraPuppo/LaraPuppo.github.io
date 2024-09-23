@@ -39,39 +39,30 @@
 
 
         /* NAVBAR  */
-
-
-        a {
-            color: white;
-        }
-
         .navbar {
             background-color: #1A1B1F !important;
             color: white !important;
             margin: 0;
             padding: 0;
-
         }
 
         .navbar-brand {
             font-family: 'Big Shoulders Inline Display', sans-serif;
             font-size: 65px;
+            margin-right: 20px;
+            /* Espacio entre BITS & BEATS y el texto/imagen */
         }
 
-        .navbar-brand,
         .nav-link {
             color: white;
-        }
-
-        .nav-link:hover {
-            color: #176ECD;
-        }
-
-        .nav-link {
             font-family: 'Poppins', sans-serif;
             font-weight: 300;
             font-size: 20px;
             text-align: left !important;
+        }
+
+        .nav-link:hover {
+            color: #00FFFF;
         }
 
         .icon-text {
@@ -86,23 +77,16 @@
             margin-bottom: 5px;
         }
 
-        .navbar-custom .nav-link {
-            font-size: 16px;
-            text-align: center;
-        }
-
-        b {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-        }
-
+        /* Nueva clase para ajustar la distribución de los elementos */
         .navbar-elements {
             display: flex;
-            /* Mostrar por defecto, se ocultará mediante opacity */
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
             opacity: 0;
             /* Ocultar por defecto */
             transform: translateX(-30px);
-            /* Mover hacia arriba para el efecto de entrada */
+            /* Mover hacia la izquierda para el efecto de entrada */
             transition: opacity 0.5s ease, transform 0.5s ease;
             /* Transición suave */
         }
@@ -110,16 +94,30 @@
         .navbar-elements.active {
             opacity: 1;
             /* Mostrar cuando está activo */
-            transform: translateY(0);
+            transform: translateX(0);
             /* Volver a la posición original */
         }
 
-        .container {
+        .navbar-elements .left-side {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            width: 100%;
+            gap: 15px;
+            /* Espacio entre los elementos a la izquierda */
         }
+
+        .navbar-elements .right-side {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            /* Espacio entre los íconos a la derecha */
+        }
+
+        /* Asegurar que los íconos de la derecha estén bien espaciados */
+        .nav-item {
+            display: flex;
+            align-items: center;
+        }
+
 
 
         /* MAPA */
@@ -259,10 +257,7 @@
             margin: 0 10px;
             cursor: pointer;
             font-size: 1.5rem;
-            padding: 10px;
-            border: 2px solid white;
-            color: white;
-            border-radius: 5px;
+            padding: 20px;
         }
 
         .decade-images {
@@ -275,8 +270,7 @@
         .decade-image img {
             filter: grayscale(100%);
             transition: filter 0.5s ease-in-out;
-
-            margin: 0px 20px;
+            margin: 0px 40px;
         }
 
         .color-active img {
@@ -290,43 +284,49 @@
 <body id="body">
     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom">
         <div class="container-fluid mx-4 py-0 my-0">
-            <a class="navbar-brand visible" href="#">BITS & BEATS</a>
+            <a class="navbar-brand" href="#">BITS & BEATS</a>
+            
             <div class="navbar-elements">
-                <ul class="navbar-nav me-auto ">
+                <!-- Elementos a la izquierda -->
+                <div class="left-side">
                     <li class="nav-item">
-                        <img src="assets/SONIDO.svg" alt="">
+                        <img src="assets/SONIDO.svg" alt="Sonido">
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">LA NUEVA <b>ERA </b><br> DE LOS VIDEOCLIPS</a>
+                        <a class="nav-link" href="#">LA NUEVA <b>ERA</b> <br> DE LOS VIDEOCLIPS</a>
                     </li>
-                </ul>
-                <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item ms-5 me-3">
+                </div>
+    
+                <!-- Elementos a la derecha -->
+                <div class="right-side">
+                    <li class="nav-item">
                         <div class="icon-text">
-                            <img src="assets/genero.svg" alt="">
+                            <img src="assets/genero.svg" alt="Género">
                             <a class="nav-link mt-1" href="#">Género</a>
                         </div>
                     </li>
-                    <li class="nav-item mx-3">
+                    <li class="nav-item">
                         <div class="icon-text">
-                            <img src="assets/continentes.svg" alt="">
+                            <img src="assets/continentes.svg" alt="Continentes">
                             <a class="nav-link mt-1" href="#">Continentes</a>
                         </div>
                     </li>
-                    <li class="nav-item ms-3 me-5">
+                    <li class="nav-item">
                         <div class="icon-text">
-                            <img src="assets/años.svg" alt="">
+                            <img src="assets/años.svg" alt="Años">
                             <a class="nav-link" href="#">Años</a>
                         </div>
                     </li>
-                </ul>
+                </div>
             </div>
         </div>
     </nav>
+    
 
 
     <div class="map-container">
-        <div id="map-text">DESCUBRE COMO EL <B>CGI</B> Y LA <B>INTELIGENCIA ARTIFICIAL</B> HAN TRANSFORMADO LOS VIDEOCLIPS DE LA INDUSTRIA MUSICAL A LO LARGO DE LAS <B>DECADAS</B>
+        <div id="map-text">DESCUBRE COMO EL <B>CGI</B> Y LA <B>INTELIGENCIA ARTIFICIAL</B> HAN TRANSFORMADO LOS
+            VIDEOCLIPS DE LA INDUSTRIA MUSICAL A LO LARGO DE LAS <B>DECADAS</B>
         </div>
         <svg id="allSvg" baseprofile="tiny" fill="#ececec" stroke="none" stroke-linecap="round" stroke-linejoin="round"
             version="1.2" viewbox="0 0 2000 857" xmlns="http://www.w3.org/2000/svg">
@@ -1885,7 +1885,7 @@
 
         <!-- Imágenes de las décadas -->
         <div class="decade-images mt-2">
-            <div class="decade-image ms-5">
+            <div class="decade-image ">
                 <img src="assets/80s.svg" alt="80s">
             </div>
             <div class="decade-image">
