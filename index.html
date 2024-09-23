@@ -104,6 +104,21 @@
             max-width: 1200px;
             margin-bottom: 20px;
             background-color: #111214;
+            /* Color original */
+            transition: background-color 0.5s ease;
+            /* Transición suave */
+        }
+
+        .allPaths {
+            fill: #232323;
+            /* Color para el estado B/N */
+            transition: fill 0.5s ease;
+            /* Transición suave */
+        }
+
+        .allPaths.color-active {
+            fill: #424242;
+            /* Color para el estado en color */
         }
 
         svg {
@@ -138,94 +153,105 @@
             cursor: pointer;
         }
 
-        /* Eliminar efecto hover */
         .no-hover {
             pointer-events: none;
         }
 
         .timeline-container {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
+            background-color: #131416;
             color: white;
         }
 
-        .slider {
-            position: relative;
-            width: 80%;
-            height: 10px;
-            background-color: #555;
-            margin: 0 15px;
-            border-radius: 5px;
-        }
-
-        .slider::before {
-            content: '';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 10px;
-            height: 30px;
-            background-color: cyan;
-            border-radius: 5px;
-        }
 
         .decade-images {
             display: flex;
             justify-content: center;
-            margin-top: 10px;
+            margin-top: 0px;
         }
 
-        .decade-image {
-            width: 80px;
-            height: 80px;
-            margin: 0 5px;
-        }
-
+        /* Estado inicial */
         .decade-image img {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
+            filter: grayscale(100%);
+            transition: filter 0.5s ease-in-out;
+            width: 180px;
+            height: 80px;
+            margin: 0px 20px;
         }
 
-        .btn-pause {
-            background-color: #222;
-            border: none;
-            padding: 10px;
-            border-radius: 10px;
+        .color-active img {
+            filter: grayscale(0%);
+            /* Colores */
+        }
+
+        .navbar-elements {
+            display: flex;
+            /* Mostrar por defecto, se ocultará mediante opacity */
+            opacity: 0;
+            /* Ocultar por defecto */
+            transform: translateY(-10px);
+            /* Mover hacia arriba para el efecto de entrada */
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            /* Transición suave */
+        }
+
+        .navbar-elements.active {
+            opacity: 1;
+            /* Mostrar cuando está activo */
+            transform: translateY(0);
+            /* Volver a la posición original */
+        }
+
+
+        #map-text {
+            display: block;
+            /* Mostrar el texto sobre el mapa inicialmente */
+        }
+
+        #map-text.hidden {
+            display: none;
+            /* Ocultar el texto cuando está en el estado activado */
+        }
+
+        .tiempo {
+            width: 100%;
+        }
+
+        .square {
+            width: 260px;
+            height: 100px;
+            background-color: #0f0f0f;
             display: flex;
             justify-content: center;
             align-items: center;
+
         }
 
-        .btn-pause i {
-            font-size: 24px;
-            color: cyan;
+        .btn-pause {
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .btn-pause img {
+            width: 50px;
+            height: auto;
         }
     </style>
 </head>
 
+
 <body id="body">
-
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom">
         <div class="container-fluid mx-4 py-0 my-0">
-            <a class="navbar-brand" href="#">BITS & BEATS</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
+            <a class="navbar-brand visible" href="#">BITS & BEATS</a>
+            <div class="navbar-elements">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <img src="assets/SONIDO.svg" alt="">
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#">LA NUEVA <b>ERA </b><br> DE LOS VIDEOCLIPS</a>
+                        <a class="nav-link" href="#">LA NUEVA <b>ERA </b><br> DE LOS VIDEOCLIPS</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mt-3">
@@ -254,6 +280,7 @@
 
 
     <div class="map-container">
+        <div id="map-text">Texto sobre el mapa</div>
         <svg id="allSvg" baseprofile="tiny" fill="#ececec" stroke="none" stroke-linecap="round" stroke-linejoin="round"
             version="1.2" viewbox="0 0 2000 857" xmlns="http://www.w3.org/2000/svg">
             <path class="allPaths"
@@ -1798,102 +1825,69 @@
         </svg>
     </div>
 
-    <!-- <div id="name" style="position: absolute; background-color: rgba(255, 255, 255, 0.8); width: fit-content; opacity: 0; border-radius: 5px; border: 3px solid rgb(245, 128, 128); padding: 0px 5px; font-size: 1.5rem;">
-    <p id="namep">Name</p>
-</div>
-<div id="timeCont" style="background-color: white; width: fit-content; font-size: 1.5rem; padding: 5px 5px; border-radius: 5px; border: 3px solid rgb(245, 128, 128);">
-    <p id="time">Time</p>
-</div> -->
+    <img class="tiempo" src="assets/TIEMPO.svg" alt="TIEMPO">
 
-    <div class="timeline">
-        <div class="decade" data-decade="80s">80s</div>
-        <div class="decade" data-decade="90s">90s</div>
-        <div class="decade" data-decade="00s">00s</div>
-        <div class="decade" data-decade="10s">10s</div>
-        <div class="decade" data-decade="20s">20s</div>
-    </div>
-
-    <footer class="timeline-container">
-        <!-- Botón de pausa -->
-        <button class="btn-pause">
-            <i class="fas fa-pause"></i>
-        </button>
-
-        <!-- Línea de tiempo / slider -->
-        <div class="slider">
-            <!-- Puedes agregar elementos en el slider aquí -->
+    <footer class="timeline-container m-0 p-0">
+        <!-- Botón Play/Pause -->
+        <div class="square">
+            <button class="btn-pause" id="toggleButton">
+                <img id="toggleIcon" src="assets/play.svg" alt="Play/Pausa">
+            </button>
         </div>
 
+
         <!-- Imágenes de las décadas -->
-        <div class="decade-images">
-            <div class="decade-image">
-                <img src="assets/80s.png" alt="80s">
+        <div class="decade-images mt-2">
+            <div class="decade-image ms-5">
+                <img src="assets/80s.svg" alt="80s">
             </div>
             <div class="decade-image">
-                <img src="assets/90s.png" alt="90s">
+                <img src="assets/90s.svg" alt="90s">
             </div>
             <div class="decade-image">
-                <img src="assets/00s.png" alt="00s">
+                <img src="assets/00s.svg" alt="00s">
             </div>
             <div class="decade-image">
-                <img src="assets/10s.png" alt="10s">
+                <img src="assets/10s.svg" alt="10s">
             </div>
             <div class="decade-image">
-                <img src="assets/20s.png" alt="20s">
+                <img src="assets/20s.svg" alt="20s">
             </div>
         </div>
     </footer>
-    <!-- FontAwesome para el ícono de pausa -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
 </body>
 
 <script>
+    document.getElementById("toggleButton").addEventListener("click", function () {
+        const images = document.querySelectorAll(".decade-image");
+        const icon = document.getElementById("toggleIcon");
+        const navbarElements = document.querySelector(".navbar-elements");
+        const mapText = document.getElementById("map-text");
+        const allPaths = document.querySelectorAll(".allPaths"); // Selecciona todos los caminos
 
-    const colors = {
-        "80s": { base: '#351C75', special: '#B4A7D6', specialCountries: ['United States', 'Argentina', 'United Kingdom', 'Norway'] },
-        "90s": { base: '#00A063', special: '#8BF6CE', specialCountries: ['Australia', 'Netherlands', 'United States', 'United Kingdom'] },
-        "00s": { base: '#990000', special: '#EA9999', specialCountries: ['United Kingdom', 'United States', 'France', 'Japan', 'Norway', 'Colombia', 'Iceland', 'Australia'] },
-        "10s": { base: '#741B47', special: '#D5A6BD', specialCountries: ['Argentina', 'Canada', 'United States', 'United Kingdom', 'Brazil', 'France', 'South Korea', 'Russia'] },
-        "20s": { base: '#1155CC', special: '#6D9EEB', specialCountries: ['Argentina', 'South Korea', 'United States', 'Canada'] }
-        // Añadir más décadas y colores si es necesario
-    };
-
-    document.querySelectorAll('.decade').forEach(decade => {
-        decade.addEventListener('click', function () {
-            const selectedDecade = this.getAttribute('data-decade');
-            const { base, special, specialCountries } = colors[selectedDecade];
-
-            document.querySelectorAll('.allPaths').forEach(path => {
-                if (specialCountries.includes(path.id)) {
-                    path.style.fill = special;
-                    path.classList.remove('no-hover');
-                } else {
-                    path.style.fill = base;
-                    path.classList.add('no-hover');
-                }
-            });
-        });
-    });
-
-    async function getUser(place) {
-        const api_url = `https://timezone.abstractapi.com/v1/current_time/?api_key=YOUR_API_KEY&location=${place}`;
-
-        const response = await fetch(api_url);
-
-        const data = await response.json();
-
-        time = await data.datetime;
-        document.getElementById("time").innerText = `${place}'s time = ${time} ${data.timezone_abbreviation}`;
-    }
-
-    document.querySelectorAll(".allPaths").forEach(e => {
-        e.addEventListener("click", function () {
-            getUser(e.id);
+        // Alterna entre blanco y negro y color
+        images.forEach(function (image) {
+            image.classList.toggle("color-active");
         });
 
-        // Configura el estilo de hover para eliminarlo si es necesario
-        e.classList.add('no-hover');
+        const isColorActive = images[0].classList.contains("color-active");
+
+        if (isColorActive) {
+            icon.src = "assets/pause.svg";
+            navbarElements.classList.add("active"); // Mostrar navbar
+            mapText.classList.add("hidden"); // Ocultar texto sobre el mapa
+            allPaths.forEach(path => path.classList.add("color-active")); // Cambiar a color
+        } else {
+            icon.src = "assets/play.svg";
+            navbarElements.classList.remove("active"); // Ocultar navbar
+            mapText.classList.remove("hidden"); // Mostrar texto sobre el mapa
+            allPaths.forEach(path => path.classList.remove("color-active")); // Cambiar a B/N
+        }
     });
+
+
 </script>
 
 </html>
