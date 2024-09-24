@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bits & Beats</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -31,6 +32,14 @@
             box-sizing: border-box;
         }
 
+        .no-hover {
+            pointer-events: none;
+            /* Deshabilita los eventos de puntero */
+            cursor: default;
+            /* Cambia el cursor para que no parezca clickeable */
+        }
+
+
         body {
             background-color: #111214;
             font-family: Arial, sans-serif;
@@ -38,10 +47,9 @@
         }
 
 
-        /* NAVBAR  */
+        /* Estilos para la navbar */
         .navbar {
             background-color: #1A1B1F !important;
-            color: white !important;
             margin: 0;
             padding: 0;
         }
@@ -49,20 +57,44 @@
         .navbar-brand {
             font-family: 'Big Shoulders Inline Display', sans-serif;
             font-size: 65px;
-            margin-right: 20px;
-            /* Espacio entre BITS & BEATS y el texto/imagen */
+            color: white !important;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            color: #00FFFF !important;
+            font-family: 'Poppins', sans-serif;
         }
 
         .nav-link {
-            color: white;
-            font-family: 'Poppins', sans-serif;
             font-weight: 300;
-            font-size: 20px;
-            text-align: left !important;
+            font-size: 15px;
+            text-align: center !important;
         }
 
-        .nav-link:hover {
-            color: #00FFFF;
+        .nav-item:hover {
+            color: #00A0A0;
+        }
+
+        /* Cambiar el color del SVG usando fill en el hover */
+        .icon-text:hover svg path {
+            fill: #00A0A0 !important;
+            /* Aseguramos que se aplique el fill */
+        }
+
+        /* Asegurar que las imágenes SVG no interfieran con los cambios de estilo */
+        .icon-text svg path {
+            fill: #00FFFF;
+            /* Color inicial del icono */
+        }
+
+        .nav-subtitle {
+            text-decoration: none;
+            font-weight: 100;
+            font-size: 20px;
+            text-align: left;
+            color: white;
         }
 
         .icon-text {
@@ -72,12 +104,12 @@
         }
 
         .icon-text img {
-            width: 35px;
+            width: 45px;
             height: auto;
             margin-bottom: 5px;
         }
 
-        /* Nueva clase para ajustar la distribución de los elementos */
+        /* Ajustar distribución de los elementos */
         .navbar-elements {
             display: flex;
             align-items: center;
@@ -101,7 +133,7 @@
         .navbar-elements .left-side {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 0px;
             /* Espacio entre los elementos a la izquierda */
         }
 
@@ -112,12 +144,11 @@
             /* Espacio entre los íconos a la derecha */
         }
 
-        /* Asegurar que los íconos de la derecha estén bien espaciados */
-        .nav-item {
-            display: flex;
-            align-items: center;
+        .navbar-brand,
+        .nav-subtitle {
+            pointer-events: none;
+            cursor: default;
         }
-
 
 
         /* MAPA */
@@ -129,6 +160,7 @@
 
         .no-hover {
             pointer-events: none;
+            cursor: default;
         }
 
         .map-container {
@@ -143,6 +175,8 @@
             width: 100%;
             margin-bottom: 20px;
             background-color: #111214;
+            pointer-events: none;
+            cursor: default;
         }
 
         #allSvg {
@@ -180,6 +214,8 @@
             /* Inicialmente visible */
             transition: opacity 0.5s ease;
             /* Transición suave para la opacidad */
+            pointer-events: none;
+            cursor: default;
         }
 
         #map-text.hidden {
@@ -187,17 +223,13 @@
             /* Ocultar texto en el estado activado */
         }
 
-
         .allPaths {
             fill: #232323 !important;
-            /* Color para el estado B/N */
             transition: fill 0.5s ease;
-            /* Transición suave */
         }
 
         .allPaths.color-active {
             fill: #424242 !important;
-            /* Color para el estado en color */
         }
 
         svg {
@@ -285,7 +317,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom">
         <div class="container-fluid mx-4 py-0 my-0">
             <a class="navbar-brand" href="#">BITS & BEATS</a>
-            
+
             <div class="navbar-elements">
                 <!-- Elementos a la izquierda -->
                 <div class="left-side">
@@ -293,40 +325,40 @@
                         <img src="assets/SONIDO.svg" alt="Sonido">
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">LA NUEVA <b>ERA</b> <br> DE LOS VIDEOCLIPS</a>
+                        <a class="nav-subtitle" href="#">LA NUEVA <b>ERA</b> <br> DE LOS VIDEOCLIPS</a>
                     </li>
                 </div>
-    
+
                 <!-- Elementos a la derecha -->
                 <div class="right-side">
-                    <li class="nav-item">
-                        <div class="icon-text">
+                    <li class="nav-item mx-3">
+                        <div class="icon-text mt-2">
                             <img src="assets/genero.svg" alt="Género">
                             <a class="nav-link mt-1" href="#">Género</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <div class="icon-text">
+                    <li class="nav-item mx-3">
+                        <div class="icon-text mt-2">
                             <img src="assets/continentes.svg" alt="Continentes">
                             <a class="nav-link mt-1" href="#">Continentes</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <div class="icon-text">
+                    <li class="nav-item mx-3">
+                        <div class="icon-text mt-2">
                             <img src="assets/años.svg" alt="Años">
-                            <a class="nav-link" href="#">Años</a>
+                            <a class="nav-link mt-1" href="#">Años</a>
                         </div>
                     </li>
                 </div>
             </div>
         </div>
     </nav>
-    
+
 
 
     <div class="map-container">
-        <div id="map-text">DESCUBRE COMO EL <B>CGI</B> Y LA <B>INTELIGENCIA ARTIFICIAL</B> HAN TRANSFORMADO LOS
-            VIDEOCLIPS DE LA INDUSTRIA MUSICAL A LO LARGO DE LAS <B>DECADAS</B>
+        <div id="map-text">DESCUBRE CÓMO EL <B>CGI</B> Y LA <B>INTELIGENCIA ARTIFICIAL</B> HAN TRANSFORMADO LOS
+            VIDEOCLIPS DE LA INDUSTRIA MUSICAL A LO LARGO DE LAS <B>DÉCADAS</B>
         </div>
         <svg id="allSvg" baseprofile="tiny" fill="#ececec" stroke="none" stroke-linecap="round" stroke-linejoin="round"
             version="1.2" viewbox="0 0 2000 857" xmlns="http://www.w3.org/2000/svg">
@@ -1870,6 +1902,12 @@
             <circle cx="1798.2" cy="719.3" id="2">
             </circle>
         </svg>
+        <div id="location-icon" style="display: none; position: absolute;">
+            <img src="assets/location.svg" alt="Ubicación" style="width: 50px; height: auto;">
+        </div>
+        <div id="reproductor-container" style="display: none; position: absolute; bottom: 5px; right: 30px;">
+            <img src="assets/reproductor.svg" alt="Reproductor" id="reproductor-svg" />
+        </div>
     </div>
 
     <img class="tiempo" src="assets/TIEMPO.svg" alt="TIEMPO">
@@ -1907,31 +1945,59 @@
 </body>
 
 <script>
-    document.getElementById("toggleButton").addEventListener("click", function () {
-        const images = document.querySelectorAll(".decade-image");
-        const icon = document.getElementById("toggleIcon");
-        const navbarElements = document.querySelector(".navbar-elements");
-        const mapText = document.getElementById("map-text");
-        const allPaths = document.querySelectorAll(".allPaths"); // Selecciona todos los caminos
+   document.getElementById("toggleButton").addEventListener("click", function () {
+    const images = document.querySelectorAll(".decade-image");
+    const icon = document.getElementById("toggleIcon");
+    const navbarElements = document.querySelector(".navbar-elements");
+    const mapText = document.getElementById("map-text");
+    const allPaths = document.querySelectorAll(".allPaths"); // Selecciona todos los caminos
+    const reproductorContainer = document.getElementById("reproductor-container"); // Contenedor del reproductor
+    const locationIcon = document.getElementById("location-icon"); // Icono de ubicación
 
-        // Alterna entre blanco y negro y color
+    // Alterna entre blanco y negro y color para las imágenes de las décadas
+    images.forEach(function (image) {
+        image.classList.toggle("color-active");
+    });
+
+    // Alterna el color de los países en el mapa
+    allPaths.forEach(function (path) {
+        path.classList.toggle("color-active");
+    });
+
+    const isColorActive = images[0].classList.contains("color-active");
+
+    if (isColorActive) {
+        icon.src = "assets/pause.svg";
+        navbarElements.classList.add("active"); // Mostrar navbar
+        mapText.classList.add("hidden"); // Ocultar texto sobre el mapa
+        reproductorContainer.style.display = "block"; // Mostrar el reproductor
+
+        // Habilitar clics en las décadas
         images.forEach(function (image) {
-            image.classList.toggle("color-active");
+            image.classList.remove("no-hover");
+            image.addEventListener("click", function () {
+                // Mostrar el icono de ubicación en el mapa
+                locationIcon.style.display = "block";
+                // Aquí puedes ajustar la posición del icono de ubicación si es necesario
+                // Ejemplo: locationIcon.style.top = "100px"; locationIcon.style.left = "100px";
+            });
+        });
+    } else {
+        icon.src = "assets/play.svg";
+        navbarElements.classList.remove("active"); // Ocultar navbar
+        mapText.classList.remove("hidden"); // Mostrar texto sobre el mapa
+        reproductorContainer.style.display = "none"; // Ocultar el reproductor
+
+        // Deshabilitar clics en las décadas
+        images.forEach(function (image) {
+            image.classList.add("no-hover");
         });
 
-        const isColorActive = images[0].classList.contains("color-active");
+        // Ocultar el icono de ubicación
+        locationIcon.style.display = "none"; // Asegúrate de que esté oculto cuando no está en "pause"
+    }
+});
 
-        if (isColorActive) {
-            icon.src = "assets/pause.svg";
-            navbarElements.classList.add("active"); // Mostrar navbar
-            mapText.classList.add("hidden"); // Ocultar texto sobre el mapa
-        } else {
-            icon.src = "assets/play.svg";
-            navbarElements.classList.remove("active"); // Ocultar navbar
-            mapText.classList.remove("hidden"); // Mostrar texto sobre el mapa
-        }
-
-    });
 
 
 
