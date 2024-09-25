@@ -1992,10 +1992,24 @@
                 fill="white" />
         </svg>
 
-        <div id="reproductor-container" style="display: none; position: absolute; bottom: 5px; right: 30px;">
-            <img src="assets/reproductor.svg" alt="Reproductor" id="reproductor-svg" />
-        </div>
     </div>
+
+    <div id="reproductor-container" style="position: absolute; bottom: 150px; right: 30px;">
+        <img src="assets/reproductor.svg" alt="Reproductor" id="reproductor-svg" 
+             data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" 
+             style="cursor: pointer;" />
+    </div>
+    
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        ...
+      </div>
+    </div>
+    
     <div id="marker" class="marker" style="display: none;">
         <svg width="27" height="187" viewBox="0 0 27 187" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="9" y="26.0498" width="8" height="160.95" fill="#00FFFF" />
@@ -2111,6 +2125,10 @@
             }
         });
     });
+
+    const reproductorContainer = document.getElementById("reproductor-container");
+reproductorContainer.style.display = "none"; // Asegúrate de que esté oculto inicialmente
+
 
 
 </script>
