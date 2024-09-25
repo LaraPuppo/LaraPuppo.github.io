@@ -150,6 +150,29 @@
             cursor: default;
         }
 
+        .modal-header {
+            background-color: #1A1B1F;
+            border-bottom: transparent;
+        }
+
+        .btn-close {
+            filter: invert(1);
+            /* Invierte el color para que sea blanco */
+            background-color: transparent;
+            /* Asegura que no haya fondo visible */
+            border: none;
+        }
+
+
+        .modal-body {
+            padding: 0;
+        }
+
+        .modal-image {
+            width: 100%;
+            object-fit: cover;
+        }
+
 
         /* MAPA */
 
@@ -345,27 +368,72 @@
                 <!-- Elementos a la derecha -->
                 <div class="right-side">
                     <li class="nav-item mx-3">
-                        <div class="icon-text mt-2">
+                        <button type="button" class="icon-text mt-2" data-bs-toggle="modal"
+                            data-bs-target="#modalGenero">
                             <img src="assets/genero.svg" alt="Género">
                             <a class="nav-link mt-1" href="#">Género</a>
-                        </div>
+                        </button>
                     </li>
                     <li class="nav-item mx-3">
-                        <div class="icon-text mt-2">
+                        <button type="button" class="icon-text mt-2" data-bs-toggle="modal"
+                            data-bs-target="#modalContinentes">
                             <img src="assets/continentes.svg" alt="Continentes">
                             <a class="nav-link mt-1" href="#">Continentes</a>
-                        </div>
+                        </button>
                     </li>
                     <li class="nav-item mx-3">
-                        <div class="icon-text mt-2">
+                        <button type="button" class="icon-text mt-2" data-bs-toggle="modal"
+                            data-bs-target="#modalAños">
                             <img src="assets/años.svg" alt="Años">
                             <a class="nav-link mt-1" href="#">Años</a>
-                        </div>
+                        </button>
                     </li>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- Modal para Género -->
+    <div class="modal fade" id="modalGenero" tabindex="-1" aria-labelledby="modalGeneroLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para agrandar el modal -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0"> <!-- p-0 quita el padding del body -->
+                    <img src="assets/gnro80s.svg" alt="Imagen Género" class="img-fluid modal-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Continentes -->
+    <div class="modal fade" id="modalContinentes" tabindex="-1" aria-labelledby="modalGeneroLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para agrandar el modal -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0"> <!-- p-0 quita el padding del body -->
+                    <img src="assets/cntnts80s.svg" alt="Imagen Género" class="img-fluid modal-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Modal para Años -->
+        <div class="modal fade" id="modalAños" tabindex="-1" aria-labelledby="modalGeneroLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para agrandar el modal -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0"> <!-- p-0 quita el padding del body -->
+                        <img src="assets/años80s.svg" alt="Imagen Género" class="img-fluid modal-image">
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
@@ -1918,7 +1986,11 @@
         <!-- <div id="location-icon" style="display: none; position: absolute;">
             <img src="assets/location.svg" alt="Ubicación" style="width: 50px; height: auto;">
         </div> -->
-        <svg id="location-icon" style="position: absolute; display: none;"> <path d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z" fill="white"/> </svg> 
+        <svg id="location-icon" style="position: absolute; display: none;">
+            <path
+                d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
+                fill="white" />
+        </svg>
 
         <div id="reproductor-container" style="display: none; position: absolute; bottom: 5px; right: 30px;">
             <img src="assets/reproductor.svg" alt="Reproductor" id="reproductor-svg" />
@@ -1932,7 +2004,7 @@
                 fill="#00FFFF" />
         </svg>
     </div>
-    
+
 
     <img class="tiempo" src="assets/TIEMPO.svg" alt="TIEMPO">
 
@@ -1969,76 +2041,76 @@
 </body>
 
 <script>
-document.getElementById("toggleButton").addEventListener("click", function () {
-    const images = document.querySelectorAll(".decade-image");
-    const icon = document.getElementById("toggleIcon");
-    const navbarElements = document.querySelector(".navbar-elements");
-    const mapText = document.getElementById("map-text");
-    const allPaths = document.querySelectorAll(".allPaths");
-    const reproductorContainer = document.getElementById("reproductor-container");
-    const locationIcon = document.getElementById("location-icon");
+    document.getElementById("toggleButton").addEventListener("click", function () {
+        const images = document.querySelectorAll(".decade-image");
+        const icon = document.getElementById("toggleIcon");
+        const navbarElements = document.querySelector(".navbar-elements");
+        const mapText = document.getElementById("map-text");
+        const allPaths = document.querySelectorAll(".allPaths");
+        const reproductorContainer = document.getElementById("reproductor-container");
+        const locationIcon = document.getElementById("location-icon");
 
-    // Alterna entre blanco y negro y color para las imágenes de las décadas
-    images.forEach(function (image) {
-        image.classList.toggle("color-active");
-    });
+        // Alterna entre blanco y negro y color para las imágenes de las décadas
+        images.forEach(function (image) {
+            image.classList.toggle("color-active");
+        });
 
-    // Alterna el color de los países en el mapa
-    allPaths.forEach(function (path) {
-        path.classList.toggle("color-active");
-    });
+        // Alterna el color de los países en el mapa
+        allPaths.forEach(function (path) {
+            path.classList.toggle("color-active");
+        });
 
-    const isColorActive = images[0].classList.contains("color-active");
+        const isColorActive = images[0].classList.contains("color-active");
 
-    if (isColorActive) {
-        icon.src = "assets/pause.svg";
-        navbarElements.classList.add("active");
-        mapText.classList.add("hidden");
-        reproductorContainer.style.display = "block"; 
-
-        // Mostrar el icono de ubicación en el estado de color
-        locationIcon.style.display = "block"; 
-    } else {
-        icon.src = "assets/play.svg";
-        navbarElements.classList.remove("active");
-        mapText.classList.remove("hidden");
-        reproductorContainer.style.display = "none"; 
-
-        // Ocultar el icono de ubicación cuando no está en color
-        locationIcon.style.display = "none"; 
-        marker.style.display = "none"; // Ocultar el marcador en estado blanco y negro
-    }
-});
-
-const marker = document.getElementById('marker');
-const decades = document.querySelectorAll('.decade-image');
-
-// Establecer posición inicial del marcador
-marker.style.left = "calc(50% - 100px)"; // Ajusta la posición inicial
-marker.style.display = "none"; // Asegúrate de que esté oculto inicialmente
-const locationIcon = document.getElementById("location-icon");
-locationIcon.style.display = "none"; // Asegúrate de que esté oculto inicialmente
-
-// Cambia la posición del marcador y el icono de ubicación al hacer clic en una década, solo si está en color
-decades.forEach((decade, index) => {
-    decade.addEventListener('click', (event) => {
-        const isColorActive = document.querySelectorAll(".decade-image")[0].classList.contains("color-active");
         if (isColorActive) {
-            const decadeRect = event.target.getBoundingClientRect();
-            const decadeWidth = decadeRect.width;
-            const decadeLeft = decadeRect.left + window.scrollX;
+            icon.src = "assets/pause.svg";
+            navbarElements.classList.add("active");
+            mapText.classList.add("hidden");
+            reproductorContainer.style.display = "block";
 
-            // Mueve el marcador al centro de la década seleccionada
-            const markerPosition = decadeLeft + (decadeWidth / 2) - (marker.offsetWidth / 2);
-            marker.style.left = `${markerPosition}px`;
-            marker.style.display = "block"; // Mostrar el marcador cuando se selecciona una década
+            // Mostrar el icono de ubicación en el estado de color
+            locationIcon.style.display = "block";
+        } else {
+            icon.src = "assets/play.svg";
+            navbarElements.classList.remove("active");
+            mapText.classList.remove("hidden");
+            reproductorContainer.style.display = "none";
 
-            // Cambiar la posición del icono de ubicación según la década
-            locationIcon.style.display = "block"; // Mostrar el icono de ubicación
-            locationIcon.style.left = `${decadeLeft + (decadeWidth / 2) - 25}px`; // Ajustar la posición del icono
+            // Ocultar el icono de ubicación cuando no está en color
+            locationIcon.style.display = "none";
+            marker.style.display = "none"; // Ocultar el marcador en estado blanco y negro
         }
     });
-});
+
+    const marker = document.getElementById('marker');
+    const decades = document.querySelectorAll('.decade-image');
+
+    // Establecer posición inicial del marcador
+    marker.style.left = "calc(50% - 100px)"; // Ajusta la posición inicial
+    marker.style.display = "none"; // Asegúrate de que esté oculto inicialmente
+    const locationIcon = document.getElementById("location-icon");
+    locationIcon.style.display = "none"; // Asegúrate de que esté oculto inicialmente
+
+    // Cambia la posición del marcador y el icono de ubicación al hacer clic en una década, solo si está en color
+    decades.forEach((decade, index) => {
+        decade.addEventListener('click', (event) => {
+            const isColorActive = document.querySelectorAll(".decade-image")[0].classList.contains("color-active");
+            if (isColorActive) {
+                const decadeRect = event.target.getBoundingClientRect();
+                const decadeWidth = decadeRect.width;
+                const decadeLeft = decadeRect.left + window.scrollX;
+
+                // Mueve el marcador al centro de la década seleccionada
+                const markerPosition = decadeLeft + (decadeWidth / 2) - (marker.offsetWidth / 2);
+                marker.style.left = `${markerPosition}px`;
+                marker.style.display = "block"; // Mostrar el marcador cuando se selecciona una década
+
+                // Cambiar la posición del icono de ubicación según la década
+                locationIcon.style.display = "block"; // Mostrar el icono de ubicación
+                locationIcon.style.left = `${decadeLeft + (decadeWidth / 2) - 25}px`; // Ajustar la posición del icono
+            }
+        });
+    });
 
 
 </script>
