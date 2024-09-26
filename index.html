@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bits & Beats</title>
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,329 +24,6 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/37d6505749.js" crossorigin="anonymous"></script>
 
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .no-hover {
-            pointer-events: none;
-            /* Deshabilita los eventos de puntero */
-            cursor: default;
-            /* Cambia el cursor para que no parezca clickeable */
-        }
-
-
-        body {
-            background-color: #111214;
-            font-family: Arial, sans-serif;
-            color: white !important;
-        }
-
-
-        /* Estilos para la navbar */
-        .navbar {
-            background-color: #1A1B1F !important;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar-brand {
-            font-family: 'Big Shoulders Inline Display', sans-serif;
-            font-size: 65px;
-            color: white !important;
-        }
-
-        .nav-item {
-            display: flex;
-            align-items: center;
-            color: #00FFFF !important;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .nav-link {
-            font-weight: 300;
-            font-size: 15px;
-            text-align: center !important;
-        }
-
-        .nav-item:hover {
-            color: #00A0A0;
-        }
-
-        /* Cambiar el color del SVG usando fill en el hover */
-        .icon-text:hover svg path {
-            fill: #00A0A0 !important;
-            /* Aseguramos que se aplique el fill */
-        }
-
-        /* Asegurar que las imágenes SVG no interfieran con los cambios de estilo */
-        .icon-text svg path {
-            fill: #00FFFF;
-            /* Color inicial del icono */
-        }
-
-        .nav-subtitle {
-            text-decoration: none;
-            font-weight: 100;
-            font-size: 20px;
-            text-align: left;
-            color: white;
-        }
-
-        .icon-text {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: transparent;
-            border: none;
-            color: #00FFFF;
-        }
-
-        .icon-text img {
-            width: 45px;
-            height: auto;
-            margin-bottom: 5px;
-        }
-
-        /* Ajustar distribución de los elementos */
-        .navbar-elements {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            opacity: 0;
-            /* Ocultar por defecto */
-            transform: translateX(-30px);
-            /* Mover hacia la izquierda para el efecto de entrada */
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            /* Transición suave */
-        }
-
-        .navbar-elements.active {
-            opacity: 1;
-            /* Mostrar cuando está activo */
-            transform: translateX(0);
-            /* Volver a la posición original */
-        }
-
-        .navbar-elements .left-side {
-            display: flex;
-            align-items: center;
-            gap: 0px;
-            /* Espacio entre los elementos a la izquierda */
-        }
-
-        .navbar-elements .right-side {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            /* Espacio entre los íconos a la derecha */
-        }
-
-        .navbar-brand,
-        .nav-subtitle {
-            pointer-events: none;
-            cursor: default;
-        }
-
-        .modal-header {
-            background-color: #1A1B1F;
-            border-bottom: transparent;
-        }
-
-        .btn-close {
-            filter: invert(1);
-            /* Invierte el color para que sea blanco */
-            background-color: transparent;
-            /* Asegura que no haya fondo visible */
-            border: none;
-        }
-
-        .modal-body {
-            padding: 0;
-        }
-
-        .modal-image {
-            width: 100%;
-            object-fit: cover;
-        }
-
-        /* MAPA */
-
-
-        svg path {
-            cursor: pointer;
-        }
-
-        .no-hover {
-            pointer-events: none;
-            cursor: default;
-        }
-
-        .map-container {
-            position: relative;
-            /* Permite posicionar elementos hijos de manera absoluta */
-            display: flex;
-            /* Usamos flexbox para centrar */
-            justify-content: center;
-            /* Centra horizontalmente */
-            align-items: center;
-            /* Centra verticalmente */
-            width: 100%;
-            margin-bottom: 20px;
-            background-color: #111214;
-            pointer-events: none;
-            cursor: default;
-        }
-
-        #allSvg {
-            width: 100%;
-            /* Para que el mapa use todo el ancho disponible */
-            max-width: 1150px;
-            /* Mantén el tamaño máximo que deseas */
-            margin: 0 auto;
-            /* Centra el SVG en su contenedor */
-            height: auto;
-            /* Mantiene la proporción */
-        }
-
-        #map-text {
-            position: absolute;
-            /* Posiciona el texto de forma absoluta */
-            top: 50%;
-            /* Centra verticalmente */
-            left: 50%;
-            /* Centra horizontalmente */
-            transform: translate(-50%, -50%);
-            /* Ajusta la posición para centrarlo completamente */
-            text-align: center;
-            /* Centra el texto */
-            color: white;
-            /* Color del texto */
-            z-index: 10;
-            /* Asegúrate de que el texto esté por encima del SVG */
-            padding: 10px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 100;
-            font-size: 35px;
-            /* Agrega la transición */
-            opacity: 1;
-            /* Inicialmente visible */
-            transition: opacity 0.5s ease;
-            /* Transición suave para la opacidad */
-            pointer-events: none;
-            cursor: default;
-        }
-
-        #map-text.hidden {
-            opacity: 0;
-            /* Ocultar texto en el estado activado */
-        }
-
-        .allPaths {
-            fill: #232323 !important;
-            transition: fill 0.5s ease;
-        }
-
-        .allPaths.color-active {
-            fill: #424242 !important;
-        }
-
-        svg {
-            width: 100%;
-            height: auto;
-        }
-
-
-        /* LINEA DE TIEMPO */
-
-        #marker {
-            position: absolute;
-            bottom: 0px;
-            left: 50%;
-            /* Elimina esta línea: transform: translateX(-80%); */
-            transition: left 0.3s ease;
-            z-index: 10;
-        }
-
-        #marker svg {
-            width: 19px;
-            height: auto;
-        }
-
-        footer {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 1.2rem;
-            padding: 0px;
-        }
-
-        .timeline {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 0px;
-        }
-
-        .timeline-container {
-            display: flex;
-            background-color: #131416;
-            color: white;
-        }
-
-        .tiempo {
-            width: 100%;
-        }
-
-        .square {
-            width: 260px;
-            height: 90px;
-            background-color: #0f0f0f;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        .btn-pause {
-            background: none;
-            border: none;
-            padding: 0;
-        }
-
-        .btn-pause img {
-            width: 50px;
-            height: auto;
-        }
-
-        .decade {
-            margin: 0 10px;
-            cursor: pointer;
-            font-size: 1.5rem;
-            padding: 20px;
-        }
-
-        .decade-images {
-            display: flex;
-            justify-content: center;
-            margin-top: 0px;
-        }
-
-        /* Estado inicial */
-        .decade-image img {
-            filter: grayscale(100%);
-            transition: filter 0.5s ease-in-out;
-            margin: 0px 40px;
-        }
-
-        .color-active img {
-            filter: grayscale(0%);
-            /* Colores */
-        }
-    </style>
 </head>
 
 
@@ -383,8 +60,7 @@
                         </button>
                     </li>
                     <li class="nav-item mx-3">
-                        <button type="button" class="icon-text mt-2" data-bs-toggle="modal"
-                            data-bs-target="#modalAños">
+                        <button type="button" class="icon-text mt-2" data-bs-toggle="modal" data-bs-target="#modalAños">
                             <img src="assets/años.svg" alt="Años">
                             <a class="nav-link mt-1" href="#">Años</a>
                         </button>
@@ -422,19 +98,19 @@
         </div>
     </div>
 
-        <!-- Modal para Años -->
-        <div class="modal fade" id="modalAños" tabindex="-1" aria-labelledby="modalGeneroLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para agrandar el modal -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body p-0"> <!-- p-0 quita el padding del body -->
-                        <img src="assets/años80s.svg" alt="Imagen Género" class="img-fluid modal-image">
-                    </div>
+    <!-- Modal para Años -->
+    <div class="modal fade" id="modalAños" tabindex="-1" aria-labelledby="modalGeneroLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para agrandar el modal -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0"> <!-- p-0 quita el padding del body -->
+                    <img src="assets/años80s.svg" alt="Imagen Género" class="img-fluid modal-image">
                 </div>
             </div>
         </div>
+    </div>
 
 
 
@@ -1984,9 +1660,6 @@
             <circle cx="1798.2" cy="719.3" id="2">
             </circle>
         </svg>
-        <!-- <div id="location-icon" style="display: none; position: absolute;">
-            <img src="assets/location.svg" alt="Ubicación" style="width: 50px; height: auto;">
-        </div> -->
         <svg id="location-icon" style="position: absolute; display: none;">
             <path
                 d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
@@ -1996,21 +1669,20 @@
     </div>
 
     <div id="reproductor-container" style="position: absolute; bottom: 150px; right: 30px;">
-        <img src="assets/reproductor.svg" alt="Reproductor" id="reproductor-svg" 
-             data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" 
-             style="cursor: pointer;" />
+        <img src="assets/reproductor.svg" alt="Reproductor" id="reproductor-svg" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="cursor: pointer;" />
     </div>
-    
+
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        ...
-      </div>
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            ...
+        </div>
     </div>
-    
+
     <div id="marker" class="marker" style="display: none;">
         <svg width="27" height="187" viewBox="0 0 27 187" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="9" y="26.0498" width="8" height="160.95" fill="#00FFFF" />
@@ -2051,87 +1723,10 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 
 
 </body>
 
-<script>
-    document.getElementById("toggleButton").addEventListener("click", function () {
-        const images = document.querySelectorAll(".decade-image");
-        const icon = document.getElementById("toggleIcon");
-        const navbarElements = document.querySelector(".navbar-elements");
-        const mapText = document.getElementById("map-text");
-        const allPaths = document.querySelectorAll(".allPaths");
-        const reproductorContainer = document.getElementById("reproductor-container");
-        const locationIcon = document.getElementById("location-icon");
-
-        // Alterna entre blanco y negro y color para las imágenes de las décadas
-        images.forEach(function (image) {
-            image.classList.toggle("color-active");
-        });
-
-        // Alterna el color de los países en el mapa
-        allPaths.forEach(function (path) {
-            path.classList.toggle("color-active");
-        });
-
-        const isColorActive = images[0].classList.contains("color-active");
-
-        if (isColorActive) {
-            icon.src = "assets/pause.svg";
-            navbarElements.classList.add("active");
-            mapText.classList.add("hidden");
-            reproductorContainer.style.display = "block";
-
-            // Mostrar el icono de ubicación en el estado de color
-            locationIcon.style.display = "block";
-        } else {
-            icon.src = "assets/play.svg";
-            navbarElements.classList.remove("active");
-            mapText.classList.remove("hidden");
-            reproductorContainer.style.display = "none";
-
-            // Ocultar el icono de ubicación cuando no está en color
-            locationIcon.style.display = "none";
-            marker.style.display = "none"; // Ocultar el marcador en estado blanco y negro
-        }
-    });
-
-    const marker = document.getElementById('marker');
-    const decades = document.querySelectorAll('.decade-image');
-
-    // Establecer posición inicial del marcador
-    marker.style.left = "calc(50% - 100px)"; // Ajusta la posición inicial
-    marker.style.display = "none"; // Asegúrate de que esté oculto inicialmente
-    const locationIcon = document.getElementById("location-icon");
-    locationIcon.style.display = "none"; // Asegúrate de que esté oculto inicialmente
-
-    // Cambia la posición del marcador y el icono de ubicación al hacer clic en una década, solo si está en color
-    decades.forEach((decade, index) => {
-        decade.addEventListener('click', (event) => {
-            const isColorActive = document.querySelectorAll(".decade-image")[0].classList.contains("color-active");
-            if (isColorActive) {
-                const decadeRect = event.target.getBoundingClientRect();
-                const decadeWidth = decadeRect.width;
-                const decadeLeft = decadeRect.left + window.scrollX;
-
-                // Mueve el marcador al centro de la década seleccionada
-                const markerPosition = decadeLeft + (decadeWidth / 2) - (marker.offsetWidth / 2);
-                marker.style.left = `${markerPosition}px`;
-                marker.style.display = "block"; // Mostrar el marcador cuando se selecciona una década
-
-                // Cambiar la posición del icono de ubicación según la década
-                locationIcon.style.display = "block"; // Mostrar el icono de ubicación
-                locationIcon.style.left = `${decadeLeft + (decadeWidth / 2) - 25}px`; // Ajustar la posición del icono
-            }
-        });
-    });
-
-    const reproductorContainer = document.getElementById("reproductor-container");
-reproductorContainer.style.display = "none"; // Asegúrate de que esté oculto inicialmente
-
-
-
-</script>
 
 </html>

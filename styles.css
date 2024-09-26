@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.no-hover {
+    pointer-events: none;
+    /* Deshabilita los eventos de puntero */
+    cursor: default;
+    /* Cambia el cursor para que no parezca clickeable */
+}
+
+
+body {
+    background-color: #111214;
+    font-family: Arial, sans-serif;
+    color: white !important;
+}
+
+
+/* Estilos para la navbar */
+.navbar {
+    background-color: #1A1B1F !important;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand {
+    font-family: 'Big Shoulders Inline Display', sans-serif;
+    font-size: 65px;
+    color: white !important;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    color: #00FFFF !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-link {
+    font-weight: 300;
+    font-size: 15px;
+    text-align: center !important;
+}
+
+.nav-item:hover {
+    color: #00A0A0;
+}
+
+/* Cambiar el color del SVG usando fill en el hover */
+.icon-text:hover svg path {
+    fill: #00A0A0 !important;
+    /* Aseguramos que se aplique el fill */
+}
+
+/* Asegurar que las imágenes SVG no interfieran con los cambios de estilo */
+.icon-text svg path {
+    fill: #00FFFF;
+    /* Color inicial del icono */
+}
+
+.nav-subtitle {
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 20px;
+    text-align: left;
+    color: white;
+}
+
+.icon-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: #00FFFF;
+}
+
+.icon-text img {
+    width: 45px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+/* Ajustar distribución de los elementos */
+.navbar-elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    opacity: 0;
+    /* Ocultar por defecto */
+    transform: translateX(-30px);
+    /* Mover hacia la izquierda para el efecto de entrada */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Transición suave */
+}
+
+.navbar-elements.active {
+    opacity: 1;
+    /* Mostrar cuando está activo */
+    transform: translateX(0);
+    /* Volver a la posición original */
+}
+
+.navbar-elements .left-side {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    /* Espacio entre los elementos a la izquierda */
+}
+
+.navbar-elements .right-side {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    /* Espacio entre los íconos a la derecha */
+}
+
+.navbar-brand,
+.nav-subtitle {
+    pointer-events: none;
+    cursor: default;
+}
+
+.modal-header {
+    background-color: #1A1B1F;
+    border-bottom: transparent;
+}
+
+.btn-close {
+    filter: invert(1);
+    /* Invierte el color para que sea blanco */
+    background-color: transparent;
+    /* Asegura que no haya fondo visible */
+    border: none;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+.modal-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* MAPA */
+
+
+svg path {
+    cursor: pointer;
+}
+
+.no-hover {
+    pointer-events: none;
+    cursor: default;
+}
+
+.map-container {
+    position: relative;
+    /* Permite posicionar elementos hijos de manera absoluta */
+    display: flex;
+    /* Usamos flexbox para centrar */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #111214;
+    pointer-events: none;
+    cursor: default;
+}
+
+#allSvg {
+    width: 100%;
+    /* Para que el mapa use todo el ancho disponible */
+    max-width: 1150px;
+    /* Mantén el tamaño máximo que deseas */
+    margin: 0 auto;
+    /* Centra el SVG en su contenedor */
+    height: auto;
+    /* Mantiene la proporción */
+}
+
+#map-text {
+    position: absolute;
+    /* Posiciona el texto de forma absoluta */
+    top: 50%;
+    /* Centra verticalmente */
+    left: 50%;
+    /* Centra horizontalmente */
+    transform: translate(-50%, -50%);
+    /* Ajusta la posición para centrarlo completamente */
+    text-align: center;
+    /* Centra el texto */
+    color: white;
+    /* Color del texto */
+    z-index: 10;
+    /* Asegúrate de que el texto esté por encima del SVG */
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 35px;
+    /* Agrega la transición */
+    opacity: 1;
+    /* Inicialmente visible */
+    transition: opacity 0.5s ease;
+    /* Transición suave para la opacidad */
+    pointer-events: none;
+    cursor: default;
+}
+
+#map-text.hidden {
+    opacity: 0;
+    /* Ocultar texto en el estado activado */
+}
+
+.allPaths {
+    fill: #232323 !important;
+    transition: fill 0.5s ease;
+}
+
+.allPaths.color-active {
+    fill: #424242 !important;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+}
+
+
+/* LINEA DE TIEMPO */
+
+#marker {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    /* Elimina esta línea: transform: translateX(-80%); */
+    transition: left 0.3s ease;
+    z-index: 10;
+}
+
+#marker svg {
+    width: 19px;
+    height: auto;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0px;
+}
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.timeline-container {
+    display: flex;
+    background-color: #131416;
+    color: white;
+}
+
+.tiempo {
+    width: 100%;
+}
+
+.square {
+    width: 260px;
+    height: 90px;
+    background-color: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn-pause {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.btn-pause img {
+    width: 50px;
+    height: auto;
+}
+
+.decade {
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 20px;
+}
+
+.decade-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+/* Estado inicial */
+.decade-image img {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease-in-out;
+    margin: 0px 40px;
+}
+
+.color-active img {
+    filter: grayscale(0%);
+    /* Colores */
+}
