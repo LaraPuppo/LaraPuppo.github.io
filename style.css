@@ -194,7 +194,6 @@ svg {
 #marker {
     position: absolute;
     bottom: 0px;
-    left: 50%;
     transition: left 0.3s ease;
     z-index: 10;
 }
