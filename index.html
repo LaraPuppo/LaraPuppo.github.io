@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bits & Beats</title>
     <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,8 +21,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/37d6505749.js" crossorigin="anonymous"></script>
-
+        <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://kit.fontawesome.com/37d6505749.js" crossorigin="anonymous"></script> -->
 </head>
 
 
@@ -31,88 +30,8 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom">
         <div class="container-fluid mx-4 py-0 my-0">
             <a class="navbar-brand" href="#">BITS & BEATS</a>
-
-            <div class="navbar-elements">
-                <!-- Elementos a la izquierda -->
-                <div class="left-side">
-                    <li class="nav-item">
-                        <img src="assets/SONIDO.svg" alt="Sonido">
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-subtitle" href="#">LA NUEVA <b>ERA</b> <br> DE LOS VIDEOCLIPS</a>
-                    </li>
-                </div>
-
-                <!-- Elementos a la derecha -->
-                <div class="right-side">
-                    <li class="nav-item mx-3">
-                        <button type="button" class="icon-text mt-2" data-bs-toggle="modal"
-                            data-bs-target="#modalGenero">
-                            <img src="assets/genero.svg" alt="Género">
-                            <a class="nav-link mt-1" href="#">Género</a>
-                        </button>
-                    </li>
-                    <li class="nav-item mx-3">
-                        <button type="button" class="icon-text mt-2" data-bs-toggle="modal"
-                            data-bs-target="#modalContinentes">
-                            <img src="assets/continentes.svg" alt="Continentes">
-                            <a class="nav-link mt-1" href="#">Continentes</a>
-                        </button>
-                    </li>
-                    <li class="nav-item mx-3">
-                        <button type="button" class="icon-text mt-2" data-bs-toggle="modal" data-bs-target="#modalAños">
-                            <img src="assets/años.svg" alt="Años">
-                            <a class="nav-link mt-1" href="#">Años</a>
-                        </button>
-                    </li>
-                </div>
-            </div>
         </div>
     </nav>
-
-    <!-- Modal para Género -->
-    <div class="modal fade" id="modalGenero" tabindex="-1" aria-labelledby="modalGeneroLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para agrandar el modal -->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-0"> <!-- p-0 quita el padding del body -->
-                    <img src="assets/gnro80s.svg" alt="Imagen Género" class="img-fluid modal-image">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal para Continentes -->
-    <div class="modal fade" id="modalContinentes" tabindex="-1" aria-labelledby="modalGeneroLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para agrandar el modal -->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-0"> <!-- p-0 quita el padding del body -->
-                    <img src="assets/cntnts80s.svg" alt="Imagen Género" class="img-fluid modal-image">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal para Años -->
-    <div class="modal fade" id="modalAños" tabindex="-1" aria-labelledby="modalGeneroLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para agrandar el modal -->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-0"> <!-- p-0 quita el padding del body -->
-                    <img src="assets/años80s.svg" alt="Imagen Género" class="img-fluid modal-image">
-                </div>
-            </div>
-        </div>
-    </div>
-
-
 
     <div class="map-container">
         <div id="map-text">DESCUBRE CÓMO EL <B>CGI</B> Y LA <B>INTELIGENCIA ARTIFICIAL</B> HAN TRANSFORMADO LOS
@@ -1660,36 +1579,6 @@
             <circle cx="1798.2" cy="719.3" id="2">
             </circle>
         </svg>
-        <svg id="location-icon" style="position: absolute; display: none;">
-            <path
-                d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
-                fill="white" />
-        </svg>
-
-    </div>
-
-    <div id="reproductor-container" style="position: absolute; bottom: 150px; right: 30px;">
-        <img src="assets/reproductor.svg" alt="Reproductor" id="reproductor-svg" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="cursor: pointer;" />
-    </div>
-
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            ...
-        </div>
-    </div>
-
-    <div id="marker" class="marker" style="display: none;">
-        <svg width="27" height="187" viewBox="0 0 27 187" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="9" y="26.0498" width="8" height="160.95" fill="#00FFFF" />
-            <path
-                d="M0 4.99999C0 2.23857 2.23858 0 5 0H22C24.7614 0 27 2.23858 27 5V18.6027C27 20.0799 26.3468 21.4814 25.2157 22.4314L20.0869 26.7392C19.1861 27.4957 18.0474 27.9104 16.8711 27.9104H9.28061C7.98995 27.9104 6.74928 27.4114 5.81817 26.5176L1.53756 22.4087C0.555278 21.4658 0 20.1631 0 18.8016V4.99999Z"
-                fill="#00FFFF" />
-        </svg>
     </div>
 
 
@@ -1706,19 +1595,19 @@
 
         <!-- Imágenes de las décadas -->
         <div class="decade-images mt-2">
-            <div class="decade-image ">
+            <div class="decade-gray ">
                 <img src="assets/80s.svg" alt="80s">
             </div>
-            <div class="decade-image">
+            <div class="decade-gray">
                 <img src="assets/90s.svg" alt="90s">
             </div>
-            <div class="decade-image">
+            <div class="decade-gray">
                 <img src="assets/00s.svg" alt="00s">
             </div>
-            <div class="decade-image">
+            <div class="decade-gray">
                 <img src="assets/10s.svg" alt="10s">
             </div>
-            <div class="decade-image">
+            <div class="decade-gray">
                 <img src="assets/20s.svg" alt="20s">
             </div>
         </div>
