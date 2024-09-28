@@ -1802,7 +1802,7 @@
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
             <h5 style="color:#FFA902" class="offcanvas-title ms-auto" id="offcanvasRightLabel">20's</h5>
-        </div>        
+        </div>
         <div class="offcanvas-body">
             <img src="assets/list20s.svg" alt="">
         </div>
@@ -1853,7 +1853,7 @@
 </body>
 
 <script>
-function openModal(locationId) {
+    function openModal(locationId) {
         // Muestra el modal
         document.getElementById('myModal').style.display = 'block';
 
@@ -1866,145 +1866,146 @@ function openModal(locationId) {
         let videoId = ''; // Inicializar videoId
 
         // Actualiza el contenido del modal y el video según la ubicación
-      if (locationId === 'UnitedStates1') {
-    modalTitle.innerText = 'HIP-HOP';
-    modalDescription.innerHTML = `
+        if (locationId === 'UnitedStates1') {
+            modalTitle.innerText = 'HIP-HOP';
+            modalDescription.innerHTML = `
     <p> "Sicko Mode" </p>
     <p> Travis Scott (2020)</p>
     <p>Estados Unidos</p>
     <p>  El videoclip presenta CGI para crear paisajes surrealistas y efectos visuales que representan el estilo único y futurista de Travis Scott. Los efectos incluyen cambios en el entorno y elementos visuales que se sincronizan con los cambios de ritmo y estilo de la canción. </p>
 `;
-    modalImpact.innerHTML = `
+            modalImpact.innerHTML = `
     <p> El video fue destacado por su estilo visual innovador y su capacidad para reflejar el mundo de fantasía que Travis Scott crea en su música. Fue ampliamente comentado y compartido en las redes sociales, aumentando su impacto en la cultura pop.</p>
 `;
-    videoId = 'https://www.youtube.com/watch?v=6ONRf7h3Mdk'; //  "Sicko Mode"
-} else if (locationId === 'UnitedStates2') {
-    modalTitle.innerText = 'POP';
-    modalDescription.innerHTML = `
+            videoId = 'https://www.youtube.com/watch?v=6ONRf7h3Mdk'; //  "Sicko Mode"
+        } else if (locationId === 'UnitedStates2') {
+            modalTitle.innerText = 'POP';
+            modalDescription.innerHTML = `
     <p>"Don't Start Now"</p>
     <p>Dua Lipa (2020)  </p>
     <p>Estados Unidos</p>
     <p> El videoclip incluye animaciones 3D y efectos visuales que transforman el entorno y los movimientos de la artista, dándole un aire moderno y dinámico.</p>
 `;
-    modalImpact.innerHTML = `
+            modalImpact.innerHTML = `
     <p>Fue ampliamente elogiado por su creatividad y estilo visual, contribuyendo a la popularidad de Dua Lipa en la escena musical global. </p>
 `;
-    videoId = 'https://www.youtube.com/watch?v=oygrmJFKYZY'; // "Don't Start Now"
+            videoId = 'https://www.youtube.com/watch?v=oygrmJFKYZY'; // "Don't Start Now"
 
-} else if (locationId === 'UnitedStates3') {
-    modalTitle.innerText = 'ELECCTRONICA';
-    modalDescription.innerHTML = `
+        } else if (locationId === 'UnitedStates3') {
+            modalTitle.innerText = 'ELECCTRONICA';
+            modalDescription.innerHTML = `
     <<p>  "I Am AI" </p>
     <p> Taryn Southern (2020)</p>
     <p>Estados Unidos</p>
    <p> Este videoclip es notable porque fue parte de un proyecto más amplio en el que Taryn Southern trabajó con la IA para componer la música y crear el video. La IA generó los efectos visuales y las animaciones que se ven en el video, reflejando una colaboración entre artista y tecnología.</p>
 `;
-    modalImpact.innerHTML = `
+            modalImpact.innerHTML = `
     <p> El proyecto fue pionero en demostrar cómo la IA puede ser utilizada no solo en la creación de música, sino también en la producción de videoclips, subrayando el potencial de la tecnología en el mundo del entretenimiento.</p>
 `;
-    videoId = 'https://www.youtube.com/watch?v=IrSLGdTN2yI '; //  "I Am AI" 
-}else if (locationId === 'UnitedStates4') {
-    modalTitle.innerText = 'POP';
-    modalDescription.innerHTML = `
+            videoId = 'https://www.youtube.com/watch?v=IrSLGdTN2yI '; //  "I Am AI" 
+        } else if (locationId === 'UnitedStates4') {
+            modalTitle.innerText = 'POP';
+            modalDescription.innerHTML = `
    <p> "Como Yo"</p>
     <p> Marshmello y Tiago PZK (2023)</p>
     <p>Estados Unidos</p>
    <p> El videoclip presenta una amplia gama de efectos visuales generados por computadora. Estos incluyen animaciones y escenarios digitales que crean un entorno visualmente impresionante y estilizado. El uso de CGI ayuda a realzar la atmósfera de la canción, proporcionando un ambiente futurista y vibrante.</p>
 `;
-    modalImpact.innerHTML = `
+            modalImpact.innerHTML = `
       <p>  El uso de CGI en el video ha sido elogiado por su capacidad para combinar visualmente con la energía y el ritmo de la canción, creando una experiencia visual atractiva que complementa la música. La tecnología contribuye a la creación de un entorno envolvente que captura la esencia moderna del estilo musical de los artistas.</p>
 `;
-    videoId = ' https://www.youtube.com/watch?v=6kxcENOfVvw'; // "Como Yo"
-}else if (locationId === 'Canada1') {
-    modalTitle.innerText = 'POP';
-    modalDescription.innerHTML = `
+            videoId = ' https://www.youtube.com/watch?v=6kxcENOfVvw'; // "Como Yo"
+        } else if (locationId === 'Canada1') {
+            modalTitle.innerText = 'POP';
+            modalDescription.innerHTML = `
    <p> "Peaches"</p>
     <p> Justin Bieber (2021)</p>
     <p>Canada</p>
     <p>  El videoclip utiliza CGI para crear una serie de entornos visuales estilizados y vibrantes. Incluye gráficos animados que transforman los paisajes y añaden elementos surrealistas y coloridos al video. La tecnología CGI se utiliza para crear un ambiente alegre y moderno que complementa el estilo de la canción.</p>
 `;
-    modalImpact.innerHTML = `
+            modalImpact.innerHTML = `
     <p> "Peaches" fue un éxito global y el videoclip recibió elogios por su estilo visual innovador y creativo. El uso de CGI ayudó a realzar la atmósfera del video, contribuyendo al éxito de la canción y mostrando cómo los efectos visuales digitales pueden mejorar la presentación de la música pop y R&B.</p>
 `;
-    videoId = 'https://www.youtube.com/watch?v=tQ0yjYUFKAE'; // "Peaches"
+            videoId = 'https://www.youtube.com/watch?v=tQ0yjYUFKAE'; // "Peaches"
 
-} else if (locationId === 'Canada2') {
-    modalTitle.innerText = 'ELECTRONICA';
-    modalDescription.innerHTML = `
+        } else if (locationId === 'Canada2') {
+            modalTitle.innerText = 'ELECTRONICA';
+            modalDescription.innerHTML = `
     <p> "Shinigami Eyes" </p>
     <p>  Grimes (2022)</p>
     <p>Canada</p>
    <p> Grimes se presenta en un mundo digital y surrealista, con efectos visuales que incluyen animaciones 3D, entornos virtuales, y transformaciones digitales que reflejan la estética cyberpunk de la canción. La tecnología de IA se emplea para generar y manipular algunos de estos efectos visuales, agregando una capa de sofisticación a la producción.</p>
 `;
-    modalImpact.innerHTML = `
+            modalImpact.innerHTML = `
     <p>El video ha sido destacado por su estilo visual único y su capacidad para crear un ambiente inmersivo y temáticamente cohesivo. La integración de CGI y IA permite a Grimes explorar conceptos futuristas y digitales de manera innovadora, lo que refuerza el tema y el sonido experimental de la canción. </p>
 `;
-    videoId = 'https://www.youtube.com/watch?v=pzPElFdxMCM '; // "Shinigami Eyes" 
-}else if (locationId === 'SouthKorea1') {
-    modalTitle.innerText = 'K-POP';
-    modalDescription.innerHTML = `
+            videoId = 'https://www.youtube.com/watch?v=pzPElFdxMCM '; // "Shinigami Eyes" 
+        } else if (locationId === 'SouthKorea1') {
+            modalTitle.innerText = 'K-POP';
+            modalDescription.innerHTML = `
    <p> "Yet to Come"</p>
     <p>BTS (2022) </p>
     <p>Corea del sur</p>
     <p> El videoclip incluye CGI para crear ambientes visuales espectaculares y efectos especiales que complementan la temática nostálgica y emotiva de la canción. Se utilizan efectos visuales para representar un viaje a través de paisajes surrealistas y futuristas.</p>
 `;
-    modalImpact.innerHTML = `
+            modalImpact.innerHTML = `
     <p>El video ha sido elogiado por su calidad visual y su capacidad para capturar la esencia emocional de la canción. Ha recibido una respuesta positiva tanto de críticos como de fanáticos, y ha contribuido a la continua popularidad de BTS en el ámbito global. </p>
 `;
-    videoId = 'https://www.youtube.com/watch?v=kXpOEzNZ8hQ'; // "Yet to Come"
+            videoId = 'https://www.youtube.com/watch?v=kXpOEzNZ8hQ'; // "Yet to Come"
 
-} else if (locationId === 'SouthKorea2') {
-    modalTitle.innerText = 'K-POP';
-    modalDescription.innerHTML = `
+        } else if (locationId === 'SouthKorea2') {
+            modalTitle.innerText = 'K-POP';
+            modalDescription.innerHTML = `
    <p> "Ready For Love"</p>
     <p> BLACKPINK (2022)</p>
     <p>Corea del sur</p>
    <p>  El videoclip combina CGI y elementos del videojuego PUBG MOBILE para crear un entorno visualmente impresionante. Las miembros de BLACKPINK se presentan en un universo virtual inspirado en el videojuego, con efectos visuales que incluyen paisajes virtuales, escenarios de batalla y personajes digitales. La animación 3D y los gráficos de alta calidad se utilizan para integrar a las artistas en el mundo del juego, creando una experiencia visual inmersiva.</p>
 `;
-    modalImpact.innerHTML = `
+            modalImpact.innerHTML = `
     <p> El video fue destacado por su colaboración innovadora con PUBG MOBILE, uniendo el mundo del K-Pop con el gaming. La integración efectiva del estilo visual del juego con la música ayudó a fortalecer la conexión entre los dos mundos y a amplificar el impacto de la canción en la gente. </p>
 `;
-    videoId = 'https://www.youtube.com/watch?v=7WyHtSlvHD4 '; // "Ready For Love"
-} else if (locationId === 'SouthKorea3') {
-    modalTitle.innerText = 'R&B';
-    modalDescription.innerHTML = `
+            videoId = 'https://www.youtube.com/watch?v=7WyHtSlvHD4 '; // "Ready For Love"
+        } else if (locationId === 'SouthKorea3') {
+            modalTitle.innerText = 'R&B';
+            modalDescription.innerHTML = `
    <p> “Kill Bill”</p>
     <p>  SZA (2023)</p>
     <p>Corea del sur</p>
    <p>   El videoclip de "Kill Bill" emplea CGI para crear una atmósfera surrealista. Incluye efectos visuales como escenarios digitales, fondos animados y transformaciones visuales que realzan el tema oscuro y estilizado de la canción. Las escenas utilizan CGI para representar ambientes de ensueño y elementos que se desvanecen o cambian de forma.</p>
 `;
-    modalImpact.innerHTML = `
+            modalImpact.innerHTML = `
     <p>  El video ha sido aclamado por su estética visual innovadora y única, que complementa la música y la narrativa de la canción. La combinación de CGI y dirección artística ha sido elogiada por su capacidad para sumergir al espectador en un mundo visualmente impactante.</p>
 `;
-    videoId = ' https://www.youtube.com/watch?v=MSRcC626prw'; // “Kill Bill”
-}else if (locationId === 'Argentina1') {
-    modalTitle.innerText = 'TRAP';
-    modalDescription.innerHTML = `
+            videoId = ' https://www.youtube.com/watch?v=MSRcC626prw'; // “Kill Bill”
+        } else if (locationId === 'Argentina1') {
+            modalTitle.innerText = 'TRAP';
+            modalDescription.innerHTML = `
     <p> "Online"  </p>
     <p> ASAN ft. Bhavi(2023)</p>
     <p>Argentina</p>
     <p>Utiliza CGI para crear un entorno virtual y efectos visuales que simulan un ambiente digital. Aunque el video no ha especificado explícitamente el uso de IA, el estilo visual y la complejidad de las animaciones sugieren que se podrían haber utilizado técnicas de IA para mejorar la creación y manipulación de gráficos digitales, así como para generar efectos visuales innovadores. </p>
 `;
-    modalImpact.innerHTML = `
+            modalImpact.innerHTML = `
     <p>  El video fue elogiado por su estética moderna y su capacidad para capturar el tema digital y tecnológico de la canción. La integración de CGI y posibles técnicas de IA contribuyó a la creación de una experiencia visual inmersiva que resonó con el público, destacando el estilo distintivo de ASAN en el mundo del trap.</p>
 `;
-    videoId = 'https://www.youtube.com/watch?v=M_kcnvzAvxA'; //  "Online" 
+            videoId = 'https://www.youtube.com/watch?v=M_kcnvzAvxA'; //  "Online" 
 
-} else if (locationId === 'Argentina2') {
-    modalTitle.innerText = 'TRAP';
-    modalDescription.innerHTML = `
+        } else if (locationId === 'Argentina2') {
+            modalTitle.innerText = 'TRAP';
+            modalDescription.innerHTML = `
    <p> "Pochoclos"</p>
     <p> Bhavi (2023)</p>
     <p>Argentina</p>
    <p> El videoclip presenta una serie de visuales abstractos generados por computadora que van desde paisajes surrealistas hasta formas geométricas en movimiento. Estos elementos CGI se integran con el estilo musical de Bhavi para crear una experiencia visual que complementa la atmósfera de la canción. </p>
 `;
-    modalImpact.innerHTML = `
+            modalImpact.innerHTML = `
     <p>"Pochoclos" fue destacado por su uso creativo de CGI, que aportó una dimensión visual interesante al video. El videoclip ayudó a consolidar a Bhavi en la escena del trap y urbano, mostrando cómo el CGI puede ser utilizado para realzar la presentación visual en la música. </p>
 `;
-    videoId = 'https://www.youtube.com/watch?v=lvlUrAgM6vk'; // "Pochoclos"
-}
-// Establece el enlace del video de YouTube en el iframe 
-modalVideo.src = 'https://www.youtube.com/embed/${videoId}';
+            videoId = 'https://www.youtube.com/watch?v=lvlUrAgM6vk'; // "Pochoclos"
+        }
+        // Establece el enlace del video de YouTube en el iframe 
+        modalVideo.src = 'https://www.youtube.com/embed/${videoId}';
+        videoId = 'https://youtu.be/fTH71AAxXmM?si=n6B91mi1szUwj8oJ'; // "Fell in Love with a Girl"
     }
 
     function closeModal() {
