@@ -106,15 +106,17 @@ body {
 
 .navbar-modal .modal-content {
     position: relative;
-    margin: 5% auto;
-    /* padding: 20px; */
-    width: 70%;
+    margin: 0; /* Elimina cualquier margen que esté empujando el modal */
+    margin-left: auto; /* Alinea a la derecha */
+    margin-top: auto;
+    width: 60%; /* Mantiene el ancho */
     background-color: #333;
     color: white;
     display: flex;
-    /* flex-direction: row;  */
     justify-content: space-between;
 }
+
+
 
 .navbar-modal .modal-header {
     background-color: #1A1B1F;
