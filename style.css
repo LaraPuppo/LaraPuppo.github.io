@@ -13,7 +13,6 @@
 body {
     background-color: #111214 !important;
     font-family: Arial, sans-serif;
-    color: white !important;
 }
 
 
@@ -212,7 +211,7 @@ svg path {
 .svg-modal .modal-end {
     clear: both; /* Asegura que el contenido debajo no se solape con el contenido anterior */
     width: 100%;
-    padding-top: 20px;
+    padding-top: 10px;
     background-color: #222; /* Color de fondo para destacar */
     padding: 20px;
     box-sizing: border-box;
