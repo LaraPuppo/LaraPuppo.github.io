@@ -21,7 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <!-- <script src="https://kit.fontawesome.com/37d6505749.js" crossorigin="anonymous"></script> -->
 </head>
 
@@ -70,7 +70,8 @@
     </nav>
 
     <!-- Modal para Género -->
-    <div class="modal fade" id="modalGenero" tabindex="-1" aria-labelledby="modalGeneroLabel" aria-hidden="true">
+    <div class="modal fade navbar-modal" id="modalGenero" tabindex="-1" aria-labelledby="modalGeneroLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para agrandar el modal -->
             <div class="modal-content">
                 <div class="modal-header">
@@ -84,7 +85,8 @@
     </div>
 
     <!-- Modal para Continentes -->
-    <div class="modal fade" id="modalContinentes" tabindex="-1" aria-labelledby="modalGeneroLabel" aria-hidden="true">
+    <div class="modal fade navbar-modal" id="modalContinentes" tabindex="-1" aria-labelledby="modalGeneroLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para agrandar el modal -->
             <div class="modal-content">
                 <div class="modal-header">
@@ -98,7 +100,8 @@
     </div>
 
     <!-- Modal para Años -->
-    <div class="modal fade" id="modalAños" tabindex="-1" aria-labelledby="modalGeneroLabel" aria-hidden="true">
+    <div class="modal fade navbar-modal" id="modalAños" tabindex="-1" aria-labelledby="modalGeneroLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- modal-lg para agrandar el modal -->
             <div class="modal-content">
                 <div class="modal-header">
@@ -1648,18 +1651,176 @@
             <path class="allPaths" id="Fiji"
                 d="M 1994.4 606 1994 606.4 1993.2 607.5 1992.9 607.6 1992.2 608 1992 608.6 1991.6 608.8 1991.4 609.1 1991.3 609.3 1991.6 609.4 1992.2 609.1 1992.3 609 1992.6 608.7 1992.8 608.4 1993.4 608.1 1993.7 607.8 1994.3 607.5 1994.3 607.8 1993.8 608.5 1993.6 608.6 1993.7 609.2 1993.4 609.5 1993.1 609.2 1992.7 609.2 1992.2 609.3 1991.8 609.6 1991.1 609.7 1990.1 609.7 1990.6 609.2 1990.2 609 1989.6 609.2 1989.2 609.4 1989.2 609.6 1988.9 609.7 1988.7 609.8 1988.6 610.2 1988.4 610.5 1988.1 610.4 1988.1 610.2 1987.7 610.1 1987.3 610.3 1987.1 610.8 1986.8 611 1986.5 611 1986.5 610.7 1986.5 610.3 1986.3 609.9 1986.4 609.7 1986.3 609.6 1985.7 609.8 1985.7 609.4 1986.1 609.1 1986.2 609.1 1986.1 608.6 1986.4 608.5 1986.9 608.8 1987.5 608.4 1987.7 608.4 1988 608.1 1988.2 608.1 1988.5 607.8 1988.5 607.6 1989.3 607.5 1990.2 607.2 1990.5 607.1 1990.9 607.2 1991.4 607 1991.6 606.6 1991.8 606.6 1992 606.2 1992.4 606.3 1992.5 606.1 1992.7 606.2 1993.7 605.7 1993.8 606 1994 605.9 1994.2 606 1994.5 605.7 1995 605.5 1995.1 605.6 1994.6 606 1994.4 606 Z">
             </path>
-            <circle cx="997.9" cy="189.1" id="0">
-            </circle>
-            <circle cx="673.5" cy="724.1" id="1">
-            </circle>
-            <circle cx="1798.2" cy="719.3" id="2">
-            </circle>
+
+            <!-- ESTADOS UNIDOS 1 -->
+            <g transform="translate(970, 210)">
+                <svg width="41" height="59" viewBox="0 0 41 59" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="openModal('UnitedStates1')">
+                    <path
+                        d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
+                        fill="white" />
+                </svg>
+            </g>
+
+            <!-- ESTADOS UNIDOS 2 -->
+            <g transform="translate(970, 210)">
+                <svg width="41" height="59" viewBox="0 0 41 59" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="openModal('UnitedStates2')">
+                    <path
+                        d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
+                        fill="white" />
+                </svg>
+            </g>
+
+            <!-- RESTADOS UNIDOS 3 -->
+            <g transform="translate(970, 210)">
+                <svg width="41" height="59" viewBox="0 0 41 59" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="openModal('UnitedStates3')">
+                    <path
+                        d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
+                        fill="white" />
+                </svg>
+            </g>
+
+            <!-- ESTADOS UNIDOS 4 -->
+            <g transform="translate(970, 210)">
+                <svg width="41" height="59" viewBox="0 0 41 59" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="openModal('UnitedStates4')">
+                    <path
+                        d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
+                        fill="white" />
+                </svg>
+            </g>
+
+            <!-- FRANCIA 1 -->
+            <g transform="translate(970, 210)">
+                <svg width="41" height="59" viewBox="0 0 41 59" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="openModal('France1')">
+                    <path
+                        d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
+                        fill="white" />
+                </svg>
+            </g>
+
+            <!-- FRANCIA 2 -->
+            <g transform="translate(970, 210)">
+                <svg width="41" height="59" viewBox="0 0 41 59" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="openModal('France2')">
+                    <path
+                        d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
+                        fill="white" />
+                </svg>
+            </g>
+
+            <!-- FRANCIA 3 -->
+            <g transform="translate(970, 210)">
+                <svg width="41" height="59" viewBox="0 0 41 59" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="openModal('France3')">
+                    <path
+                        d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
+                        fill="white" />
+                </svg>
+            </g>
+
+            <!-- FRANCIA 4 -->
+            <g transform="translate(970, 210)">
+                <svg width="41" height="59" viewBox="0 0 41 59" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="openModal('France4')">
+                    <path
+                        d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
+                        fill="white" />
+                </svg>
+            </g>
+
+            <!-- REINO UNIDO -->
+            <g transform="translate(970, 210)">
+                <svg width="41" height="59" viewBox="0 0 41 59" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="openModal('ReinoUnido')">
+                    <path
+                        d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
+                        fill="white" />
+                </svg>
+            </g>
+
+            <!-- AUSTRALIA -->
+            <g transform="translate(970, 210)">
+                <svg width="41" height="59" viewBox="0 0 41 59" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="openModal('Australia')">
+                    <path
+                        d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
+                        fill="white" />
+                </svg>
+            </g>
+
+            <!-- COLOMBIA -->
+            <g transform="translate(970, 210)">
+                <svg width="41" height="59" viewBox="0 0 41 59" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="openModal('Colombia')">
+                    <path
+                        d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
+                        fill="white" />
+                </svg>
+            </g>
+
+            <!-- JAPON -->
+            <g transform="translate(970, 210)">
+                <svg width="41" height="59" viewBox="0 0 41 59" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="openModal('Japan')">
+                    <path
+                        d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
+                        fill="white" />
+                </svg>
+            </g>
+
+            <!-- ISLANDIA -->
+            <g transform="translate(970, 210)">
+                <svg width="41" height="59" viewBox="0 0 41 59" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="openModal('Iceland')">
+                    <path
+                        d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
+                        fill="white" />
+                </svg>
+            </g>
+
+            <!-- NORUEGA -->
+            <g transform="translate(970, 210)">
+                <svg width="41" height="59" viewBox="0 0 41 59" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="openModal('Norway')">
+                    <path
+                        d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
+                        fill="white" />
+                </svg>
+            </g>
+
+
         </svg>
-        <svg id="location-icon" style="position: absolute; display: none;">
-            <path
-                d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
-                fill="white" />
-        </svg>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal svg-modal">
+            <div class="modal-content">
+                <!-- Botón de cierre -->
+                <span class="close" onclick="closeModal()">&times;</span>
+
+                <!-- Contenedor del video (ajustado para estar en la esquina superior izquierda) -->
+                <div class="row">
+                    <div class="modal-video col align-self-start ">
+                        <iframe width="375" height="325" src="https://www.youtube.com/embed/[VIDEO_ID]" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Contenido textual -->
+                    <div class="modal-text col align-self-end">
+                        <h2 id="modal-title">Título del modal</h2>
+                        <p id="modal-description">Descripción del modal.</p>
+                    </div>
+                </div>
+                <div class="modal-end">
+                    <h3>Impacto:</h3>
+                    <p id="modal-impact">Información sobre el impacto del video.</p>
+                </div>
+            </div>
+        </div>
 
     </div>
 
@@ -1670,15 +1831,14 @@
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
+            <h5 style="color:#FE0A0A" class="offcanvas-title ms-auto" id="offcanvasRightLabel">00's</h5>
+        </div>        
         <div class="offcanvas-body">
             <img src="assets/list00s.svg" alt="">
         </div>
     </div>
 
-    <div id="marker" style="left: 820px; "class="marker">
+    <div id="marker" style="left: 820px; " class="marker">
         <svg width="27" height="187" viewBox="0 0 27 187" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="9" y="26.0498" width="8" height="160.95" fill="#00FFFF" />
             <path
@@ -1723,5 +1883,208 @@
 
 </body>
 
+<script>
+    function openModal(locationId) {
+        // Muestra el modal
+        document.getElementById('myModal').style.display = 'block';
+
+        // Variables para el contenido del modal
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
+        const modalImpact = document.getElementById('modal-impact');
+        const modalVideo = document.querySelector('.modal-video iframe');
+
+        let videoId = ''; // Inicializar videoId
+
+        // Actualiza el contenido del modal y el video según la ubicación
+        if (locationId === 'UnitedStates1') {
+            modalTitle.innerText = 'ROCK';
+            modalDescription.innerHTML = `
+        <p>"Fell in Love with a Girl"  </p>
+        <p>The white stripes (2001)</p>
+        <p>Estados Unidos</p>
+        <p>Aunque el videoclip es principalmente conocido por su uso de bloques de construcción LEGO, se incorporan técnicas visuales innovadoras que incluyen CGI para dar vida a la animación y los efectos visuales. El video es notable por su estilo de stop-motion combinado con elementos digitales.</p>
+    `;
+            modalImpact.innerHTML = `
+        <p>"Fell in Love with a Girl" es aclamado por su creatividad y el uso innovador de técnicas visuales, consolidando la reputación de Michel Gondry como un director visionario.</p>
+    `;
+            videoId = 'https://youtu.be/fTH71AAxXmM?si=n6B91mi1szUwj8oJ'; // "Fell in Love with a Girl" 
+        } else if (locationId === 'UnitedStates2') {
+            modalTitle.innerText = 'ROCK';
+            modalDescription.innerHTML = `
+        <p>"E-Pro"</p>
+        <p>Beck (2005)</p>
+        <p>Estados Unidos</p>
+        <p> En el video, Beck interactúa con un entorno animado en 3D lleno de formas abstractas y criaturas geométricas que parecen surgir y transformarse alrededor de él. La combinación de CGI con efectos visuales dinámicos genera una atmósfera frenética que complementa la energía cruda de la canción.</p>
+    `;
+            modalImpact.innerHTML = `
+        <p>"E-Pro" es un excelente ejemplo de cómo el CGI puede ser utilizado para innovar en la producción de videos musicales, creando una experiencia visual que complementa y amplifica la música. </p>
+    `;
+            videoId = 'https://www.youtube.com/watch?v=RIrG6xBW5Wk'; // "E-Pro"
+
+        } else if (locationId === 'UnitedStates3') {
+            modalTitle.innerText = 'HIP-HOP';
+            modalDescription.innerHTML = `
+        <p>"Stronger"</p>
+        <p>Kanye West (2007)</p>
+        <p>Estados Unidos</p>
+       <p>El videoclip emplea CGI para crear un entorno visual futurista y estilizado. Incluye efectos digitales y animaciones que dan un toque moderno y tecnológico al video, complementando el tema de la canción.</p>
+    `;
+            modalImpact.innerHTML = `
+        <p>"Stronger" es conocido por su estilo visual innovador y su uso creativo de CGI, ayudando a consolidar la imagen de Kanye West como un artista experimental en el hip-hop.</p>
+    `;
+            videoId = 'https://www.youtube.com/watch?v=Co0tTeuUVhU '; // "Stronger"
+        } else if (locationId === 'UnitedStates4') {
+            modalTitle.innerText = 'HIP-HOP';
+            modalDescription.innerHTML = `
+        <p>“Heartless”</p>
+        <p>Kanye West (2008)</p>
+        <p>Estados Unidos</p>
+          <p>Crea un estilo visual único inspirado en la animación rotoscópica. Todo el video presenta un mundo animado que mezcla elementos de la cultura pop y la fantasía con trazos estilizados y colores vibrantes.  La técnica de animación permite una fusión de realidad y ficción. </p>
+    `;
+            modalImpact.innerHTML = `
+          <p> Marcó un cambio en la estética visual de Kanye West,  como un creador multifacético, capaz de redefinir los límites del hip-hop, mostrando su inclinación hacia la experimentación y el arte visual. </p>
+           <p> El uso innovador de CGI y la rotoscopia en el videoclip influyó en otros artistas a adoptar enfoques más artísticos y abstractos en sus producciones visuales. </p>
+    `;
+            videoId = 'https://www.youtube.com/watch?v=Co0tTeuUVhU '; // “Heartless”
+        } else if (locationId === 'France1') {
+            modalTitle.innerText = 'HOUSE';
+            modalDescription.innerHTML = `
+        <p>"One More Time"  </p>
+        <p>Daft Punk (2000)</p>
+        <p>Francia</p>
+        <p> El videoclip es parte de la película animada Interstella 5555, que combina animación tradicional con CGI para efectos visuales y transiciones. Los mundos espaciales futuristas creados digitalmente complementan el tono electrónico de la música.</p>
+    `;
+            modalImpact.innerHTML = `
+        <p>"One More Time" fue un gran éxito, y su uso de CGI y animación capturó la imaginación del público, siendo una de las piezas clave de la evolución visual y artística de Daft Punk.</p>
+    `;
+            videoId = 'https://www.youtube.com/watch?v=FGBhQbmPwH8'; // "One More Time" 
+        } else if (locationId === 'France2') {
+            modalTitle.innerText = 'HIP-HOP';
+            modalDescription.innerHTML = `
+        <p>“Freestyler" </p>
+        <p>Daft Punk (2000)</p>
+        <p>Francia</p>
+        <p> El videoclip presenta efectos CGI que permiten al protagonista "controlar" el mundo que lo rodea usando su reproductor de música. A través de efectos digitales, el tiempo se ralentiza, retrocede y avanza, lo que crea un ambiente futurista que complementa el ritmo dinámico de la canción.</p>
+    `;
+            modalImpact.innerHTML = `
+        <p>El video fue uno de los primeros en usar CGI para crear un entorno visual interactivo y fue muy influyente en la cultura popular de principios de los 2000, especialmente en la escena de la música electrónica y hip-hop.</p>
+    `;
+            videoId = 'https://youtu.be/ymNFyxvIdaM?si=tvRDMSC2axX24y8R'; // “Freestyler" 
+        } else if (locationId === 'France3') {
+            modalTitle.innerText = 'ELECTRONICA';
+            modalDescription.innerHTML = `
+        <p>"Starlight"</p>
+        <p> The Supermen Lovers (2001)</p>
+        <p>Francia</p>
+        <p>Incluye efectos visuales y gráficos animados que transforman el entorno y añaden un toque moderno a la estética del video. Los efectos digitales se combinan con imágenes en vivo para ofrecer una experiencia visual atractiva y dinámica.</p>
+    `;
+            modalImpact.innerHTML = `
+        <p>"Starlight" fue aclamado por su enfoque visual innovador y el uso creativo de CGI. El videoclip contribuyó al éxito de The Supermen Lovers en la escena de la música electrónica y disco, mostrando cómo la tecnología digital puede ser utilizada para enriquecer la presentación visual en la música.</p>
+    `;
+            videoId = 'https://youtu.be/h61QG4s0I3U?si=cWebU5cVbtQc0Cp8'; // "Starlight"
+        } else if (locationId === 'France4') {
+            modalTitle.innerText = 'ELECTRONICA';
+            modalDescription.innerHTML = `
+        <p>"D.A.N.C.E."  </p>
+        <p>Justice (2007)</p>
+        <p>Francia</p>
+        <p>El videoclip utiliza CGI para crear un estilo visual basado en gráficos animados y tipografía en movimiento que complementa la energía de la canción. Los efectos visuales incluyen animaciones que interaccionan con el ritmo y la letra de la canción.</p>
+    `;
+            modalImpact.innerHTML = `
+        <p>"D.A.N.C.E." es notable por su estilo visual distintivo y su uso creativo de CGI, ayudando a establecer a Justice como un grupo innovador en la música electrónica.</p>
+    `;
+            videoId = ' https://www.youtube.com/watch?v=3V6rjyL_63U '; // "D.A.N.C.E." 
+        } else if (locationId === 'ReinoUnido') {
+            modalTitle.innerText = 'HIP-HOP';
+            modalDescription.innerHTML = `
+        <p>"Clint Eastwood"  </p>
+        <p>Gorillaz (2001)</p>
+        <p>Reino Unido</p>
+        <p> El videoclip es notable por su uso de CGI para crear una animación en 2D que presenta a los miembros ficticios de la banda como personajes animados. La técnica visual es distintiva y ayuda a dar vida a la estética única de Gorillaz.</p>
+    `;
+            modalImpact.innerHTML = `
+        <p>"Clint Eastwood" es famoso por su estilo visual innovador y su uso de CGI para crear una experiencia animada única, estableciendo a Gorillaz como una banda innovadora en la escena musical.</p>
+    `;
+            videoId = 'https://www.youtube.com/watch?v=UclCCFNG9q4'; // "Clint Eastwood" 
+        } else if (locationId === 'Australia') {
+            modalTitle.innerText = 'ELECTROPOP';
+            modalDescription.innerHTML = `
+        <p>"My People"</p>
+        <p>The Presets (2008) </p>
+        <p>Australia</p>
+          <p>  El video utiliza CGI para crear efectos visuales impactantes y escenarios digitales que complementan la música y las coreografías. Los elementos de CGI incluyen transformaciones de escenarios y efectos visuales que refuerzan la atmósfera electrónica y enérgica de la canción. </p>
+    `;
+            modalImpact.innerHTML = `
+        <p> Este videoclip ayudó a solidificar la posición de The Presets en la escena musical electrónica australiana y mostró cómo el CGI puede ser utilizado de manera efectiva para mejorar la experiencia visual de la música. </p>
+    `;
+            videoId = ' https://youtu.be/CZe9YxJNs48?si=GN1lB5gkTJ50JFZ9'; // "My People" 
+        } else if (locationId === 'Colombia') {
+            modalTitle.innerText = 'ROCK';
+            modalDescription.innerHTML = `
+        <p>"A Dios le Pido"  </p>
+        <p>Juanes (2002)</p>
+        <p>Colombia</p>
+        <p>El videoclip emplea CGI para crear efectos visuales que ayudan a representar los temas de la canción, como la esperanza y la lucha. Los gráficos digitales y las animaciones se utilizan para enriquecer la narrativa visual del video. </p>
+    `;
+            modalImpact.innerHTML = `
+        <p>El video es aclamado por su estilo visual innovador y su capacidad para complementar la atmósfera intensa de la canción. Ayudó a establecer a Nine Inch Nails como una banda a la vanguardia en la experimentación visual en videoclips.</p>
+    `;
+            videoId = ' https://youtu.be/kMIaYXxLnUA?si=WEqBP8u4jXFHOkEt'; // "Let Forever Be" 
+        } else if (locationId === 'Japan') {
+            modalTitle.innerText = 'ELECTRONICA';
+            modalDescription.innerHTML = `
+        <p>"Travelling" </p>
+        <p>Hikaru Utada (2002)</p>
+        <p>Japón</p>
+        <p>Se utilizaron gráficos generados por computadora para crear un entorno futurista, con escenarios de colores vibrantes y mundos surrealistas. El videoclip presenta un paisaje de trenes futuristas, túneles luminosos y secuencias de danza en espacios irreales. </p>
+    `;
+            modalImpact.innerHTML = `
+        <p>Las transiciones entre mundos oníricos y reales están basadas en CGI, lo que crea una atmósfera de "viaje" constante.</p>
+   <p>El uso de CGI combinó a la perfección la música electrónica y el J-pop con una estética visual digital única, marcando asi un hito en la integración del CGI en la música pop japonesa y contribuyó a la evolución visual del J-pop hacia una dirección más experimental y tecnológica.</p>
+        `;
+            videoId = 'https://youtu.be/4j2ZJAgdrGE?si=kmcHF_Bji1cYyvI0'; // "Travelling" 
+        } else if (locationId === 'Iceland') {
+            modalTitle.innerText = 'ELECTRONICA';
+            modalDescription.innerHTML = `
+        <p>"Green Grass of Tunnel" </p>
+        <p>Múm  (2002)</p>
+        <p>Islandia</p>
+        <p>Utiliza CGI para crear un mundo visual etéreo y onírico, acorde con el sonido delicado y atmosférico de la banda, paisajes surrealistas y elementos de la naturaleza que parecen surgir de un sueño. Envolviendo al espectador en una experiencia visual casi poética.</p>
+    `;
+            modalImpact.innerHTML = `
+        <p> Este video ha sido aclamado por su belleza artística y su capacidad para complementar el sonido etéreo de Múm;  es un ejemplo perfecto de cómo la música y el arte visual pueden fusionarse para crear una experiencia inmersiva.</p>
+           <p> Su uso de CGI para crear paisajes oníricos contribuyó a la reputación de la banda como vanguardistas dentro de la escena electrónica y ambient, destacándose por su enfoque delicado y experimental. </p>
+    `;
+            videoId = ' https://youtu.be/l5hBkQT3-C8?si=9aBVcZBrjWusRl2M'; // "Green Grass of Tunnel" 
+        } else if (locationId === 'Norway') {
+            modalTitle.innerText = 'POP-ROCK';
+            modalDescription.innerHTML = `
+        <p>"Lifelines" </p>
+        <p>A-ha (2002)</p>
+        <p>Noruega</p>
+        <p> Utiliza CGI para crear efectos visuales detallados y complejos que mejoran la narrativa del videoclip, incluyendo fondos y elementos que interactúan con los personajes.</p>
+    `;
+            modalImpact.innerHTML = `
+        <p>El uso de CGI en este videoclip no solo mejoró la narrativa, sino que también demostró cómo la tecnología podía ser utilizada para agregar profundidad y complejidad a la producción audiovisual. A-Ha consolidó su estatus como pioneros en la fusión de música y tecnología, manteniéndose relevantes en la era digital y sirviendo de inspiración para otros artistas.</p>
+    `;
+            videoId = 'https://youtu.be/DCkbfyk6XGc?si=Rb8ZoCsnKbL9DPJv'; // "Lifelines" 
+        }
+        // Establece el enlace del video de YouTube en el iframe 
+        modalVideo.src = 'https://www.youtube.com/embed/${videoId}';
+    }
+    function closeModal() {
+        document.getElementById('myModal').style.display = 'none';
+        document.querySelector('.modal-video iframe').src = ''; // Limpia el iframe cuando se cierra el modal
+    }
+
+    // Cierra el modal si se hace clic fuera de él
+    window.onclick = function (event) {
+        const modal = document.getElementById('myModal');
+        if (event.target === modal) {
+            closeModal();
+        }
+    }
+</script>
 
 </html>

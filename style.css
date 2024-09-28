@@ -218,6 +218,28 @@ svg path {
     box-sizing: border-box;
 }
 
+.offcanvas {
+    background-color: #575A60;
+    width: 100%;
+}
+
+.offcanvas-title{
+    font-family: 'Big Shoulders Inline Display', sans-serif;
+    font-size: 50px;
+}
+
+.offcanvas-header{
+    padding: 0px;
+    margin-right: 40px;
+}
+
+.offcanvas-body img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
 
 /* nose */
 
