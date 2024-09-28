@@ -1792,12 +1792,10 @@
                 <!-- Botón de cierre -->
                 <span class="close" onclick="closeModal()">&times;</span>
 
-                <!-- Contenedor del video (ajustado para estar en la esquina superior izquierda) -->
-                <div class="row">
-                    <div class="modal-video col align-self-start ">
-                        <iframe width="375" height="325" src="https://www.youtube.com/embed/[VIDEO_ID]" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                <!-- Contenedor del video -->
+                <div class="modal-video col align-self-start">
+                    <div id="video-container">
+                        <!-- Aquí se insertará el iframe dinámicamente -->
                     </div>
 
                     <!-- Contenido textual -->
@@ -1898,7 +1896,7 @@
             modalImpact.innerHTML = `
         <p>Este videoclip es conocido por su estilo visual único y su capacidad para capturar la esencia de la música de Skrillex. La integración de CGI en el video ayuda a amplificar la intensidad de la canción y contribuye a la percepción de Skrillex como un innovador en la música electrónica. El video fue aclamado por su creatividad y la forma en que los efectos visuales complementan la música. </p>
     `;
-            videoContainer.innerHTML = ''; //  "First of the Year (Equinox)"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/2cXDgFwE13g?si=3uMmOyGSexUhirqi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; //  "First of the Year (Equinox)"
         } else if (locationId === 'UnitedStates2') {
             modalTitle.innerText = 'POP';
             modalDescription.innerHTML = `
@@ -1910,7 +1908,7 @@
             modalImpact.innerHTML = `
         <p> "Love You Like a Love Song" fue elogiado por su enfoque visual creativo y su uso efectivo de CGI. El videoclip ayudó a destacar a Selena Gomez & The Scene en la escena pop y demostró cómo el CGI puede ser utilizado para realzar la presentación visual en la música pop.</p>
     `;
-            videoContainer.innerHTML = '';// "Love You Like a Love Song"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/EgT_us6AsDg?si=wpVI2Ga8qwrsfe7K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';// "Love You Like a Love Song"
 
         } else if (locationId === 'UnitedStates3') {
             modalTitle.innerText = 'POP';
@@ -1923,7 +1921,7 @@
             modalImpact.innerHTML = `
         <p>  "Where Are Ü Now" se destacó por su combinación de CGI y efectos visuales que complementaron el estilo moderno de la música EDM. El video fue aclamado por su creatividad y la forma en que utilizó tecnología digital para crear un ambiente visualmente atractivo y único, ayudando a elevar la colaboración entre Skrillex, Diplo y Justin Bieber en la escena global</p>
     `;
-            videoContainer.innerHTML = ''; // "Where Are Ü Now"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/nntGTK2Fhb0?si=40pbqRMVjQCTfXmt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // "Where Are Ü Now"
         } else if (locationId === 'UnitedStates4') {
             modalTitle.innerText = 'POP';
             modalDescription.innerHTML = `
@@ -1935,7 +1933,7 @@
             modalImpact.innerHTML = `
           <p>"That's What I Like" fue aclamado por su producción visual innovadora y su uso creativo de efectos digitales. El videoclip contribuyó al éxito de la canción y ayudó a Bruno Mars a mantener su relevancia en la música pop. La combinación de CGI y elementos visuales estilizados hizo que el video se destacara en la escena musical. </p>
     `;
-            videoContainer.innerHTML = ''; // "That's What I Like"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/PMivT7MJ41M?si=qnW9eLS1ab_9eCLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // "That's What I Like"
         } else if (locationId === 'Brazil') {
             modalTitle.innerText = 'POP';
             modalDescription.innerHTML = `
@@ -1947,7 +1945,7 @@
             modalImpact.innerHTML = `
           <p>El video de "RESTART" se destacó por su enfoque visual innovador, utilizando CGI para crear una experiencia visual que refuerza el estilo de la música electrónica. Ayudó a Cara de Santa a destacar en la escena musical latinoamericana y mostró cómo el uso de tecnología digital puede enriquecer la narrativa visual en la música pop y electrónica. </p>
     `;
-            videoContainer.innerHTML = ''; // "Cara de Santa"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/vhSveVLxq2g?si=B2hBXT7vZILDj_sl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // "Cara de Santa"
         } else if (locationId === 'France') {
             modalTitle.innerText = 'HIP-HOP';
             modalDescription.innerHTML = `
@@ -1959,7 +1957,7 @@
             modalImpact.innerHTML = `
           <p> "Turn Down for What" se destacó por su uso innovador de CGI y su capacidad para capturar la energía frenética de la música EDM y hip-hop. El videoclip se convirtió en un fenómeno viral, ayudando a DJ Snake y Lil Jon a alcanzar un amplio reconocimiento internacional.</p>
     `;
-            videoContainer.innerHTML = ''; // "Turn Down for What"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/HMUDVMiITOU?si=1Kl2erXV_OKN2ZU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // "Turn Down for What"
         } else if (locationId === 'ReinoUnido') {
             modalTitle.innerText = 'POP-ROCK';
             modalDescription.innerHTML = `
@@ -1971,7 +1969,7 @@
             modalImpact.innerHTML = `
           <p> La animación de los miembros de la banda como chimpancés bailando al ritmo de la canción fue aclamada por su originalidad y humor. La combinación de la música pegadiza con el visual vibrante ayudó a "Adventure of a Lifetime" a destacar en la escena musical, convirtiéndose en uno de los videos más memorables de la banda. La técnica de animación utilizada también recibió elogios por su calidad y la integración efectiva con la música.</p>
     `;
-            videoContainer.innerHTML = '';// "Adventure of a Lifetime"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/QtXby3twMmI?si=2GIXTxl9xO2qoMDi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';// "Adventure of a Lifetime"
         } else if (locationId === 'Canada1') {
             modalTitle.innerText = 'ELECTRONICA';
             modalDescription.innerHTML = `
@@ -1983,7 +1981,7 @@
             modalImpact.innerHTML = `
         <p> "Starboy" fue notable por su integración de CGI en un contexto de R&B y electrónica, mostrando cómo los efectos digitales pueden amplificar la estética de un artista. El video reforzó la imagen de The Weeknd como un innovador en la música pop y electrónica.</p>
     `;
-            videoContainer.innerHTML = ''; // "Starboy"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/34Na4j8AVgA?si=BTDUZis8eFyAVT5C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // "Starboy"
 
         } else if (locationId === 'Canada2') {
             modalTitle.innerText = 'POP-ROCK';
@@ -1996,7 +1994,7 @@
             modalImpact.innerHTML = `
         <p> "Up & Up" fue aclamado por su creatividad y el impacto visual que logró mediante el uso de CGI. El videoclip ofrece una experiencia visualmente estimulante que complementa la temática de la canción, ayudando a Coldplay a seguir siendo una banda innovadora en la industria de la música. El video también recibió elogios por su capacidad para mezclar el arte visual con la música de manera única.</p>
     `;
-            videoContainer.innerHTML = ''; // "Up & Up"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/BPNTC7uZYrI?si=Vof8PslGcRerI6KE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // "Up & Up"
         } else if (locationId === 'SouthKorea') {
             modalTitle.innerText = 'K-POP';
             modalDescription.innerHTML = `
@@ -2010,7 +2008,7 @@
         <p>   El videoclip fue aclamado por su uso innovador de CGI, que aportó una estética visual única y sofisticada, elevando el estándar de producción en videoclips de K-pop.
 Recibió elogios tanto de críticos como de fanáticos por su calidad visual y el concepto artístico. El video tuvo un gran impacto en la popularidad de BTS a nivel global y contribuyó al reconocimiento internacional del grupo.</p>
     `;
-            videoContainer.innerHTML = ''; // "Blood Sweat & Tears"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/hmE9f-TEutc?si=lAcBwT8XHJHgtf_Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // "Blood Sweat & Tears"
         } else if (locationId === 'Argentina1') {
             modalTitle.innerText = 'TRAP';
             modalDescription.innerHTML = `
@@ -2022,7 +2020,7 @@ Recibió elogios tanto de críticos como de fanáticos por su calidad visual y e
             modalImpact.innerHTML = `
         <p>"Piso" fue aclamado por su enfoque visual innovador y el uso creativo de CGI. El videoclip ayudó a Bhavi y Ecko a destacar en la escena del trap argentino y mostró cómo el CGI puede ser utilizado para enriquecer la experiencia visual en la música urbana. La producción visual contribuyó al éxito del tema y al reconocimiento de los artistas en el género.</p>
     `;
-            videoContainer.innerHTML = ''; // "Piso"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/4rAxOHMGq9k?si=ltBHTABGEaxGiiNa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // "Piso"
 
         } else if (locationId === 'Argentina2') {
             modalTitle.innerText = 'TRAP';
@@ -2035,7 +2033,7 @@ Recibió elogios tanto de críticos como de fanáticos por su calidad visual y e
             modalImpact.innerHTML = `
         <p>"Pastel con Nutella" fue notable por su enfoque visual innovador y el uso creativo de CGI. El video contribuyó al éxito de YSY A en la escena del trap argentino y mostró cómo la tecnología digital puede ser utilizada para enriquecer la narrativa visual en la música urbana. </p>
     `;
-            videoContainer.innerHTML = ''; // "Pastel con Nutella"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/vaYldbohGRY?si=Sv_Tm6vKi3xUmfsP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // "Pastel con Nutella"
         } else if (locationId === 'Russia') {
             modalTitle.innerText = 'POP';
             modalDescription.innerHTML = `
@@ -2047,7 +2045,7 @@ Recibió elogios tanto de críticos como de fanáticos por su calidad visual y e
             modalImpact.innerHTML = `
         <p> "Skibidi" fue un éxito viral a nivel mundial, en gran parte debido al videoclip y al baile que se convirtió en un fenómeno de internet, conocido como el "Skibidi Challenge". La banda Little Big es conocida por su estilo visual excéntrico y creativo, y el uso de CGI en sus videoclips es una parte clave de su estética.</p>
     `;
-            videoContainer.innerHTML = ''; // "Skibidi"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/mDFBTdToRmw?si=g0YXduhYKbu8KNAw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // "Skibidi"
         }
 
     }

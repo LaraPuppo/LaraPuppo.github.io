@@ -1750,10 +1750,8 @@
                     <path
                         d="M20.4167 27.7083C18.4828 27.7083 16.6281 26.9401 15.2607 25.5727C13.8932 24.2052 13.125 22.3505 13.125 20.4167C13.125 18.4828 13.8932 16.6281 15.2607 15.2607C16.6281 13.8932 18.4828 13.125 20.4167 13.125C22.3505 13.125 24.2052 13.8932 25.5727 15.2607C26.9401 16.6281 27.7083 18.4828 27.7083 20.4167C27.7083 21.3742 27.5197 22.3224 27.1533 23.2071C26.7868 24.0917 26.2497 24.8956 25.5727 25.5727C24.8956 26.2497 24.0917 26.7869 23.2071 27.1533C22.3224 27.5197 21.3742 27.7083 20.4167 27.7083ZM20.4167 0C15.0018 0 9.80877 2.15104 5.9799 5.9799C2.15104 9.80877 0 15.0018 0 20.4167C0 35.7292 20.4167 58.3333 20.4167 58.3333C20.4167 58.3333 40.8333 35.7292 40.8333 20.4167C40.8333 15.0018 38.6823 9.80877 34.8534 5.9799C31.0246 2.15104 25.8315 0 20.4167 0Z"
                         fill="#FFA902" />
-                </svg>
-                            
+                </svg>               
             </g>
-
         </svg>
 
         <!-- Modal -->
@@ -1762,12 +1760,10 @@
                 <!-- Botón de cierre -->
                 <span class="close" onclick="closeModal()">&times;</span>
 
-                <!-- Contenedor del video (ajustado para estar en la esquina superior izquierda) -->
-                <div class="row">
-                    <div class="modal-video col align-self-start ">
-                        <iframe width="375" height="325" src="https://www.youtube.com/embed/[VIDEO_ID]" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                <!-- Contenedor del video -->
+                <div class="modal-video col align-self-start">
+                    <div id="video-container">
+                        <!-- Aquí se insertará el iframe dinámicamente -->
                     </div>
 
                     <!-- Contenido textual -->
@@ -1867,7 +1863,7 @@
             modalImpact.innerHTML = `
     <p> El video fue destacado por su estilo visual innovador y su capacidad para reflejar el mundo de fantasía que Travis Scott crea en su música. Fue ampliamente comentado y compartido en las redes sociales, aumentando su impacto en la cultura pop.</p>
 `;
-            videoContainer.innerHTML = ''; //  "Sicko Mode"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/6ONRf7h3Mdk?si=wYbu_AshAQxaKB5N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; //  "Sicko Mode"
         } else if (locationId === 'UnitedStates2') {
             modalTitle.innerText = 'POP';
             modalDescription.innerHTML = `
@@ -1879,7 +1875,7 @@
             modalImpact.innerHTML = `
     <p>Fue ampliamente elogiado por su creatividad y estilo visual, contribuyendo a la popularidad de Dua Lipa en la escena musical global. </p>
 `;
-            videoContainer.innerHTML = ''; // "Don't Start Now"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/oygrmJFKYZY?si=rmyaM1QAznubtsXr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // "Don't Start Now"
 
         } else if (locationId === 'UnitedStates3') {
             modalTitle.innerText = 'ELECCTRONICA';
@@ -1892,7 +1888,7 @@
             modalImpact.innerHTML = `
     <p> El proyecto fue pionero en demostrar cómo la IA puede ser utilizada no solo en la creación de música, sino también en la producción de videoclips, subrayando el potencial de la tecnología en el mundo del entretenimiento.</p>
 `;
-            videoContainer.innerHTML = ''; //  "I Am AI" 
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/XUs6CznN8pw?si=1tJ585HhtOzXQTKp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; //  "I Am AI" 
         } else if (locationId === 'UnitedStates4') {
             modalTitle.innerText = 'POP';
             modalDescription.innerHTML = `
@@ -1904,7 +1900,7 @@
             modalImpact.innerHTML = `
       <p>  El uso de CGI en el video ha sido elogiado por su capacidad para combinar visualmente con la energía y el ritmo de la canción, creando una experiencia visual atractiva que complementa la música. La tecnología contribuye a la creación de un entorno envolvente que captura la esencia moderna del estilo musical de los artistas.</p>
 `;
-            videoContainer.innerHTML = ''; // "Como Yo"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/6kxcENOfVvw?si=aNIrmMc0WKIuho0E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // "Como Yo"
         } else if (locationId === 'Canada1') {
             modalTitle.innerText = 'POP';
             modalDescription.innerHTML = `
@@ -1916,7 +1912,7 @@
             modalImpact.innerHTML = `
     <p> "Peaches" fue un éxito global y el videoclip recibió elogios por su estilo visual innovador y creativo. El uso de CGI ayudó a realzar la atmósfera del video, contribuyendo al éxito de la canción y mostrando cómo los efectos visuales digitales pueden mejorar la presentación de la música pop y R&B.</p>
 `;
-            videoContainer.innerHTML = ''; // "Peaches"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/tQ0yjYUFKAE?si=HjuHOicaUk0LDx60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // "Peaches"
 
         } else if (locationId === 'Canada2') {
             modalTitle.innerText = 'ELECTRONICA';
@@ -1929,7 +1925,7 @@
             modalImpact.innerHTML = `
     <p>El video ha sido destacado por su estilo visual único y su capacidad para crear un ambiente inmersivo y temáticamente cohesivo. La integración de CGI y IA permite a Grimes explorar conceptos futuristas y digitales de manera innovadora, lo que refuerza el tema y el sonido experimental de la canción. </p>
 `;
-            videoContainer.innerHTML = ''; // "Shinigami Eyes" 
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/pzPElFdxMCM?si=MWuDEKVmrRoozCnR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // "Shinigami Eyes" 
         } else if (locationId === 'SouthKorea1') {
             modalTitle.innerText = 'K-POP';
             modalDescription.innerHTML = `
@@ -1941,7 +1937,7 @@
             modalImpact.innerHTML = `
     <p>El video ha sido elogiado por su calidad visual y su capacidad para capturar la esencia emocional de la canción. Ha recibido una respuesta positiva tanto de críticos como de fanáticos, y ha contribuido a la continua popularidad de BTS en el ámbito global. </p>
 `;
-            videoContainer.innerHTML = ''; // "Yet to Come"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/kXpOEzNZ8hQ?si=gT6BFLfygaeEqo4R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // "Yet to Come"
 
         } else if (locationId === 'SouthKorea2') {
             modalTitle.innerText = 'K-POP';
@@ -1954,7 +1950,7 @@
             modalImpact.innerHTML = `
     <p> El video fue destacado por su colaboración innovadora con PUBG MOBILE, uniendo el mundo del K-Pop con el gaming. La integración efectiva del estilo visual del juego con la música ayudó a fortalecer la conexión entre los dos mundos y a amplificar el impacto de la canción en la gente. </p>
 `;
-            videoContainer.innerHTML = ''; // "Ready For Love"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/7WyHtSlvHD4?si=FfOoN8BxJahOdwbJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // "Ready For Love"
         } else if (locationId === 'SouthKorea3') {
             modalTitle.innerText = 'R&B';
             modalDescription.innerHTML = `
@@ -1966,7 +1962,7 @@
             modalImpact.innerHTML = `
     <p>  El video ha sido aclamado por su estética visual innovadora y única, que complementa la música y la narrativa de la canción. La combinación de CGI y dirección artística ha sido elogiada por su capacidad para sumergir al espectador en un mundo visualmente impactante.</p>
 `;
-            videoContainer.innerHTML = ''; // “Kill Bill”
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/SQnc1QibapQ?si=_teSnjxNdUIYO95A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // “Kill Bill”
         } else if (locationId === 'Argentina1') {
             modalTitle.innerText = 'TRAP';
             modalDescription.innerHTML = `
@@ -1978,7 +1974,7 @@
             modalImpact.innerHTML = `
     <p>  El video fue elogiado por su estética moderna y su capacidad para capturar el tema digital y tecnológico de la canción. La integración de CGI y posibles técnicas de IA contribuyó a la creación de una experiencia visual inmersiva que resonó con el público, destacando el estilo distintivo de ASAN en el mundo del trap.</p>
 `;
-            videoContainer.innerHTML = ''; //  "Online" 
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/M_kcnvzAvxA?si=t2LuyRB4ieUcn0x_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; //  "Online" 
 
         } else if (locationId === 'Argentina2') {
             modalTitle.innerText = 'TRAP';
@@ -1991,7 +1987,7 @@
             modalImpact.innerHTML = `
     <p>"Pochoclos" fue destacado por su uso creativo de CGI, que aportó una dimensión visual interesante al video. El videoclip ayudó a consolidar a Bhavi en la escena del trap y urbano, mostrando cómo el CGI puede ser utilizado para realzar la presentación visual en la música. </p>
 `;
-            videoContainer.innerHTML = '';// "Pochoclos"
+            videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/lvlUrAgM6vk?si=SIhd8yGtLccLDeL1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';// "Pochoclos"
         }
 
     }
