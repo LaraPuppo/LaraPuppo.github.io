@@ -182,7 +182,6 @@ svg path {
     flex-direction: column;
 }
 
-/* Botón de cierre */
 .svg-modal .close {
     position: absolute;
     top: 10px;
@@ -191,34 +190,29 @@ svg path {
     cursor: pointer;
 }
 
-/* Estructura dividida: video y texto a la izquierda y derecha, ocupando el 50% cada uno */
-.svg-modal .modal-video,
+
+.svg-modal .video-container,
 .svg-modal .modal-text {
     flex: 1;
     padding: 20px;
 }
 
-/* Sección donde el video y el texto comparten espacio al 50% */
-.svg-modal .modal-video {
+
+.svg-modal .video-container {
     width: 50%;
     float: left;
-    /* Coloca el video en la parte izquierda */
 }
 
 .svg-modal .modal-text {
     width: 50%;
     float: right;
-    /* Coloca el texto en la parte derecha */
 }
 
-/* Sección final que ocupa todo el ancho después del video y texto */
 .svg-modal .modal-end {
     clear: both;
-    /* Asegura que el contenido debajo no se solape con el contenido anterior */
     width: 100%;
     padding-top: 10px;
     background-color: #222;
-    /* Color de fondo para destacar */
     padding: 20px;
     box-sizing: border-box;
 }
