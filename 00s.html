@@ -1796,27 +1796,33 @@
 
         </svg>
 
-        <!-- Modal -->
-        <div id="myModal" class="modal svg-modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <div class="row">
-                    <div class="modal-video col align-self-start ">
-                        <iframe width="375" height="325" src="https://www.youtube.com/embed/[VIDEO_ID]" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
-                    <div class="modal-text col align-self-end">
-                        <h2 id="modal-title">Título del modal</h2>
-                        <p id="modal-description">Descripción del modal.</p>
-                    </div>
+       <!-- Modal -->
+       <div id="myModal" class="modal svg-modal">
+        <div class="modal-content">
+            <!-- Botón de cierre -->
+            <span class="close" onclick="closeModal()">&times;</span>
+
+            <!-- Contenedor del video -->
+            <div class="modal-video col align-self-start">
+                <div id="video-container">
+                    <!-- Aquí se insertará el iframe dinámicamente -->
                 </div>
-                <div class="modal-end">
-                    <h3>Impacto:</h3>
-                    <p id="modal-impact">Información sobre el impacto del video.</p>
+
+                <!-- Contenido textual -->
+                <div class="modal-text col align-self-end">
+                    <h2 id="modal-title">Título del modal</h2>
+                    <p id="modal-description">Descripción del modal.</p>
                 </div>
             </div>
+            <div class="modal-end">
+                <h3>Impacto:</h3>
+                <p id="modal-impact">Información sobre el impacto del video.</p>
+            </div>
         </div>
+    </div>
+
+</div>
+
 
     </div>
 
@@ -2066,6 +2072,7 @@
             videoContainer.innerHTML = '<iframe class="video-container col align-self-start" width="400" height="315" src="https://www.youtube.com/embed/DCkbfyk6XGc?si=9MU42X8nP2AF6b8N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // Lifelines
         }
     }
+
     function closeModal() {
         document.getElementById('myModal').style.display = 'none';
 
