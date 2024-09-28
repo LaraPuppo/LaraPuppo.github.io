@@ -114,7 +114,6 @@
         </div>
     </div>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/0P4A1K4lXDo?si=r5n5SUe3PgwD7VfX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
     <div class="map-container">
         <svg id="allSvg" baseprofile="tiny" fill="#ececec" stroke="none" stroke-linecap="round" stroke-linejoin="round"
@@ -1910,18 +1909,16 @@
 </body>
 
 <script>
-   function openModal(locationId) {
-    // Muestra el modal
-    document.getElementById('myModal').style.display = 'block';
+       function openModal(locationId) {
+        // Muestra el modal
+        document.getElementById('myModal').style.display = 'block';
 
-    // Variables para el contenido del modal
-    const modalTitle = document.getElementById('modal-title');
-    const modalDescription = document.getElementById('modal-description');
-    const modalImpact = document.getElementById('modal-impact');
-    const videoContainer = document.getElementById('video-container');
+        // Variables para el contenido del modal
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
+        const modalImpact = document.getElementById('modal-impact');
+        const videoContainer = document.getElementById('video-container'); // Asegúrate de usar el ID correcto
 
-    // Actualiza el contenido del modal y el video según la ubicación
-    let videoId; // Variable para el VIDEO_ID
 
        // Actualiza el contenido del modal y el video según la ubicación
        if (locationId === 'UnitedStates1') {
@@ -1935,7 +1932,7 @@
             modalImpact.innerHTML = `
                 <p>"Losing My Religion" se convirtió en un hito visual y musical, siendo ampliamente elogiado por su originalidad y profundidad.</p>
             `;
-            videoId = 'xwtdhWltSIg'; // Asigna el VIDEO_ID aquí
+            videoContainer.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/xwtdhWltSIg?si=M1t2fc1m8fmK_8Gw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
         } else if (locationId === 'UnitedStates2') {
             modalTitle.innerText = 'POP';
             modalDescription.innerHTML = `
@@ -1947,17 +1944,17 @@
             modalImpact.innerHTML = `
                 <p>"Scream" es uno de los videoclips más caros de la historia, con un presupuesto de alrededor de 7 millones de dólares.</p>
             `;
-            videoId = 'dQw4w9WgXcQ'; // Otro VIDEO_ID
+            videoContainer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/xwtdhWltSIg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
         } else if (locationId === 'UnitedStates2') {
             modalTitle.innerText = 'POP';
             modalDescription.innerHTML = `
                 <p>"Scream"</p>
                 <p>Michael Jackson (1995)</p>
                 <p>Estados Unidos</p>
-                <p>El videoclip es famoso por su uso extensivo de CGI y efectos visuales. Presenta un entorno espacial futurista con efectos visuales complejos, como burbujas flotantes y paisajes cósmicos. La producción de alta tecnología y los efectos visuales avanzados contribuyen a una experiencia visual impresionante.</p>
+                <p>El videoclip es famoso por su uso extensivo de CGI y efectos visuales. Presenta un entorno espacial futurista con efectos visuales complejos.</p>
             `;
             modalImpact.innerHTML = `
-                <p>"Scream" es uno de los videoclips más caros de la historia, con un presupuesto de alrededor de 7 millones de dólares. Recibió elogios por sus efectos visuales innovadores y su coreografía intensa, y consolidó a Michael y Janet Jackson como figuras influyentes en la música y los videoclips.</p>
+                <p>"Scream" es uno de los videoclips más caros de la historia, con un presupuesto de alrededor de 7 millones de dólares.</p>
             `;
             videoContainer.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/xwtdhWltSIg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
         } else if (locationId === 'UnitedStates3') {
@@ -1971,7 +1968,7 @@
             modalImpact.innerHTML = `
         <p>El video es aclamado por su estilo visual innovador y su capacidad para complementar la atmósfera intensa de la canción. Ayudó a establecer a Nine Inch Nails como una banda a la vanguardia en la experimentación visual en videoclips.</p>
     `;
-            videoId = 'https://youtu.be/dn3j6-yQKWQ?si=XOI5Hc2USDxa7Ifn'; // "The perfect drug"
+    videoContainer.innerHTML = 'https://youtu.be/dn3j6-yQKWQ?si=XOI5Hc2USDxa7Ifn'; // "The perfect drug"
         } else if (locationId === 'UnitedStates4') {
             modalTitle.innerText = 'ELECTRONICA';
             modalDescription.innerHTML = `
@@ -1983,7 +1980,7 @@
             modalImpact.innerHTML = `
         <p>"Block Rockin' Beats" recibió elogios por su estilo visual innovador y su combinación de CGI y efectos prácticos, ayudando a establecer a The Chemical Brothers como una banda destacada en la música electrónica.</p>
     `;
-            videoId = 'https://youtu.be/iTxOKsyZ0Lw?si=r-SOsnk4NSX1B3YB'; // "Block Rockin' Beats" 
+    videoContainer.innerHTML = 'https://youtu.be/iTxOKsyZ0Lw?si=r-SOsnk4NSX1B3YB'; // "Block Rockin' Beats" 
         } else if (locationId === 'ReinoUnido1') {
             modalTitle.innerText = 'JAZZ';
             modalDescription.innerHTML = `
@@ -1996,7 +1993,7 @@
         <p>Se convirtió en un videoclip icónico por su innovadora técnica visual. La integración del CGI con efectos prácticos elevó el estándar de la creatividad en videoclips, y su estilo visual influyó en numerosos videos musicales y comerciales en los años siguientes. </p>
         <p> Este videoclip es un ejemplo clave de cómo las técnicas avanzadas de producción pueden transformar una idea simple en una obra maestra visual, y consolidó a Jamiroquai como pioneros en el uso de tecnología para complementar su música.</p>
     `;
-            videoId = 'https://www.youtube.com/watch?v=4JkIs37a2JE'; // "Virtual Insanity" 
+    videoContainer.innerHTML = 'https://www.youtube.com/watch?v=4JkIs37a2JE'; // "Virtual Insanity" 
         } else if (locationId === 'ReinoUnido2') {
             modalTitle.innerText = 'DANCE';
             modalDescription.innerHTML = `
@@ -2008,7 +2005,7 @@
             modalImpact.innerHTML = `
         <p>El video es recordado por su estilo visual vibrante y su innovador uso de efectos digitales, que complementan el ritmo y la energía de la canción. Fue influyente en la estética de los videoclips de música electrónica y dance.</p>
     `;
-            videoId = 'https://youtu.be/FMrIy9zm7QY?si=KMD6uf_W_ZXI4o6x'; // "The Rockafeller Skank"
+    videoContainer.innerHTML = 'https://youtu.be/FMrIy9zm7QY?si=KMD6uf_W_ZXI4o6x'; // "The Rockafeller Skank"
         } else if (locationId === 'ReinoUnido3') {
             modalTitle.innerText = 'ELECTRONICA';
             modalDescription.innerHTML = `
@@ -2020,7 +2017,7 @@
             modalImpact.innerHTML = `
         <p>El videoclip fue muy elogiado por su creatividad y el uso innovador de CGI para generar efectos visuales que jugaban con la percepción del espectador.</p>
     `;
-            videoId = 'https://youtu.be/s5FyfQDO5g0?si=Usnhwu9h0nQTXYhf'; // "Let Forever Be" 
+    videoContainer.innerHTML = 'https://youtu.be/s5FyfQDO5g0?si=Usnhwu9h0nQTXYhf'; // "Let Forever Be" 
         } else if (locationId === 'Netherlands1') {
             modalTitle.innerText = 'ELECTRONICA';
             modalDescription.innerHTML = `
@@ -2032,7 +2029,7 @@
             modalImpact.innerHTML = `
         <p>"Right Here, Right Now" fue aclamado por su concepto innovador y su uso de CGI para contar una narrativa visual compleja en pocos minutos. Este video ayudó a establecer a Fatboy Slim como un artista no solo de éxito musical, sino también visualmente innovador.</p>
     `;
-            videoId = 'https://youtu.be/ub747pprmJ8?si=E23wRnGbf-h-CHgO'; //  "Right Here, Right Now" 
+    videoContainer.innerHTML = 'https://youtu.be/ub747pprmJ8?si=E23wRnGbf-h-CHgO'; //  "Right Here, Right Now" 
         } else if (locationId === 'Netherlands2') {
             modalTitle.innerText = 'EURODANCE';
             modalDescription.innerHTML = `
@@ -2044,7 +2041,7 @@
             modalImpact.innerHTML = `
         <p>"Better Off Alone" fue un gran éxito en la escena de la música dance y el videoclip contribuyó a la popularidad de la canción con su estilo visual moderno y vibrante. El uso de CGI ayudó a destacar el video en la era de la música electrónica de finales de los 90. </p>
     `;
-            videoId = 'https://youtu.be/Lgs9QUtWc3M?si=dxebshl-LkjRB441'; // "Better Off Alone" 
+    videoContainer.innerHTML = 'https://youtu.be/Lgs9QUtWc3M?si=dxebshl-LkjRB441'; // "Better Off Alone" 
         } else if (locationId === 'Australia') {
             modalTitle.innerText = 'ROCK';
             modalDescription.innerHTML = `
@@ -2056,13 +2053,10 @@
             modalImpact.innerHTML = `
         <p>El videoclip es conocido por su estilo provocador y su impacto en la escena musical de los años 90, destacándose por su originalidad y enfoque visual. </p>
     `;
-            videoId = 'https://youtu.be/wv-34w8kGPM?si=sBXGNQ_ZyewiUleg'; // "I Touch Myself"
+    videoContainer.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/wv-34w8kGPM?si=DqHjHeIxagAcujfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'; // "I Touch Myself"
         }
-        videoContainer.innerHTML = `
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    `;
-}
-    
+        
+    }
 
     function closeModal() {
         document.getElementById('myModal').style.display = 'none';
